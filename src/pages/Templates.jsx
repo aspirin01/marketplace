@@ -139,7 +139,7 @@ const Templates = (props) => {
       });
       setActiveTitle("Bootstrap Products");
     }
-  }, [window.location.href]);
+  }, []);
 
   const sort = (type) => {
     const templateName = props.match.params.templateName;

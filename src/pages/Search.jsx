@@ -27,6 +27,7 @@ const Search = ({ match }) => {
         if (count > 0) {
           return product;
         }
+        return -1;
       }
     );
 
@@ -42,7 +43,7 @@ const Search = ({ match }) => {
       setAlternativeProducts([]);
       setIsAlternative(false);
     }
-  }, [window.location.href, match]);
+  }, [match]);
 
   const history = useHistory();
   const inputValue = useRef("");
