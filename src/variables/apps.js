@@ -20,7 +20,7 @@ export const apps = [
       </Text>
     ),
     link: "https://www.loopple.com/?ref=simmmple",
-    
+
   },
   {
     image: vdb,
