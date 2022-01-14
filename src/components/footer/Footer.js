@@ -1,11 +1,11 @@
 import { Divider, Flex, Grid, Icon, Link, Stack, Text } from "@chakra-ui/react";
 // Images
-import footerBg from "assets/img/footer/footer-background.png";
+import footerBg from "assets/img/footer/footer-background-bf.png";
 // Custom Components
 import IconBox from "components/icons/IconBox";
 // Icons
-import { SimmmpleLogoColored } from "components/icons/Icons";
-import MailchimpNewsletter from "components/mailchimp/MCForm";
+import { SimmmpleLogoWhite } from "components/icons/Icons";
+import MailchimpNewsletter from "components/mailchimp/MCFormBF";
 import React from "react";
 import {
   AiFillGithub,
@@ -18,7 +18,10 @@ import { FaFacebook, FaTiktok } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
-    <Flex w='100%' bg='#F4F7FE' pb='125px'>
+    <Flex
+      w='100%'
+      bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+      pb='125px'>
       <Flex
         direction='column'
         w={{ sm: "350px", md: "740px", lg: "970px", xl: "1170px" }}
@@ -56,8 +59,8 @@ const Footer = () => {
           <MailchimpNewsletter />
         </Flex>
         <Flex align='center' direction={{ sm: "column", lg: "row" }}>
-          <SimmmpleLogoColored w='170px' h='40px' me={{ lg: "40px" }} />
-          <Text color='#878CBD' mt={{ sm: "24px", lg: "0px" }}>
+          <SimmmpleLogoWhite w='170px' h='40px' me={{ lg: "40px" }} />
+          <Text color='#C5C9EB' mt={{ sm: "24px", lg: "0px" }}>
             Premium UI Kits, Templates & Themes
           </Text>
         </Flex>
@@ -67,113 +70,113 @@ const Footer = () => {
           columnGap={{ sm: "0px", lg: "72px" }}
           rowGap='50px'>
           <Flex direction='column' justifySelf='center'>
-            <Text fontSize='lg' color='brand.700' fontWeight='500' mb='26px'>
+            <Text fontSize='lg' color='white' fontWeight='500' mb='26px'>
               Explore
             </Text>
             <Stack direction='column' spacing='22px'>
               <NavLink to='/templates/figma'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Figma Products
                 </Text>
               </NavLink>
               <NavLink to='/templates/all-templates'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Coded Products
                 </Text>
               </NavLink>
               <NavLink to='/apps'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Apps & Plugins
                 </Text>
               </NavLink>
             </Stack>
           </Flex>
           <Flex direction='column' justifySelf='center'>
-            <Text fontSize='lg' color='brand.700' fontWeight='500' mb='26px'>
+            <Text fontSize='lg' color='white' fontWeight='500' mb='26px'>
               Company
             </Text>
             <Stack direction='column' spacing='22px'>
               <NavLink to='/contact'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Support & Contact
                 </Text>
               </NavLink>
               <NavLink to='/terms-of-service'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Terms of Use
                 </Text>
               </NavLink>
               <NavLink to='/privacy-policy'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Privacy Policy
                 </Text>
               </NavLink>
               <NavLink to='/licenses'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   License
                 </Text>
               </NavLink>
               <NavLink to='/about'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   About us
                 </Text>
               </NavLink>
             </Stack>
           </Flex>
           <Flex direction='column' justifySelf='center'>
-            <Text fontSize='lg' color='brand.700' fontWeight='500' mb='26px'>
+            <Text fontSize='lg' color='white' fontWeight='500' mb='26px'>
               Technologies
             </Text>
             <Stack direction='column' spacing='22px'>
               <NavLink to='/templates/premium-templates'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Premium Products
                 </Text>
               </NavLink>
               <NavLink to='/templates/free-templates'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Free Products
                 </Text>
               </NavLink>
               <NavLink to='/templates/figma'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Figma
                 </Text>
               </NavLink>
               <NavLink to='/templates/react'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   ReactJS
                 </Text>
               </NavLink>
               <NavLink to='/templates/bootstrap'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Bootstrap
                 </Text>
               </NavLink>
             </Stack>
           </Flex>
           <Flex direction='column' justifySelf='center'>
-            <Text fontSize='lg' color='brand.700' fontWeight='500' mb='26px'>
+            <Text fontSize='lg' color='white' fontWeight='500' mb='26px'>
               Resources
             </Text>
             <Stack direction='column' spacing='22px' w='100%'>
               <Link href='https://dribbble.com/simmmple'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Inspiration
                 </Text>
               </Link>
               <Link href='https://blog.simmmple.com'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Tutorials & Guides
                 </Text>
               </Link>
               <Link href='https://venusdesignsystem.com/dashboard-builder?ref=simmmple'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Dashboard Builder
                 </Text>
               </Link>
               <NavLink to='/apps'>
-                <Text color='#878CBD' fontSize='md'>
+                <Text color='#C5C9EB' fontSize='md'>
                   Third-Party Tools
                 </Text>
               </NavLink>
@@ -186,7 +189,7 @@ const Footer = () => {
             gridColumn={{ sm: "1 / 3", lg: "auto" }}>
             <Text
               fontSize='lg'
-              color='brand.700'
+              color='white'
               fontWeight='500'
               mb='26px'
               alignSelf={{ sm: "center", md: "center", lg: "flex-end" }}>
@@ -198,37 +201,48 @@ const Footer = () => {
               mb='20px'
               justifyContent={{ sm: "center", md: "center", lg: "flex-end" }}>
               <Link href='https://github.com/simmmpleweb' target='_blank'>
-                <IconBox w='48px' h='48px' borderRadius='30px' bg='#fff'>
-                  <Icon as={AiFillGithub} w='26px' h='26px' color='brand.300' />
+                <IconBox
+                  w='48px'
+                  h='48px'
+                  borderRadius='30px'
+                  bg='linear-gradient(180deg, #1A203B 0%, #101327 100%)'>
+                  <Icon as={AiFillGithub} w='26px' h='26px' color='white' />
                 </IconBox>
               </Link>
               <Link
                 href='https://www.instagram.com/simmmple.web/?hl=ro'
                 target='_blank'>
-                <IconBox w='48px' h='48px' borderRadius='30px' bg='#fff'>
+                <IconBox
+                  w='48px'
+                  h='48px'
+                  borderRadius='30px'
+                  bg='linear-gradient(180deg, #1A203B 0%, #101327 100%)'>
                   <Icon
                     as={AiOutlineInstagram}
                     w='26px'
                     h='26px'
-                    color='brand.300'
+                    color='white'
                   />
                 </IconBox>
               </Link>
               <Link href='https://twitter.com/simmmple_web' target='_blank'>
-                <IconBox w='48px' h='48px' borderRadius='30px' bg='#fff'>
-                  <Icon
-                    as={AiOutlineTwitter}
-                    w='26px'
-                    h='26px'
-                    color='brand.300'
-                  />
+                <IconBox
+                  w='48px'
+                  h='48px'
+                  borderRadius='30px'
+                  bg='linear-gradient(180deg, #1A203B 0%, #101327 100%)'>
+                  <Icon as={AiOutlineTwitter} w='26px' h='26px' color='white' />
                 </IconBox>
               </Link>
               <Link
                 href='https://web.facebook.com/simmmple.web'
                 target='_blank'>
-                <IconBox w='48px' h='48px' borderRadius='30px' bg='#fff'>
-                  <Icon as={FaFacebook} w='26px' h='26px' color='brand.300' />
+                <IconBox
+                  w='48px'
+                  h='48px'
+                  borderRadius='30px'
+                  bg='linear-gradient(180deg, #1A203B 0%, #101327 100%)'>
+                  <Icon as={FaFacebook} w='26px' h='26px' color='white' />
                 </IconBox>
               </Link>
             </Stack>
@@ -245,38 +259,45 @@ const Footer = () => {
               <Link
                 href='https://www.linkedin.com/company/simmmple/'
                 target='_blank'>
-                <IconBox w='48px' h='48px' borderRadius='30px' bg='#fff'>
-                  <Icon
-                    as={AiFillLinkedin}
-                    w='26px'
-                    h='26px'
-                    color='brand.300'
-                  />
+                <IconBox
+                  w='48px'
+                  h='48px'
+                  borderRadius='30px'
+                  bg='linear-gradient(180deg, #1A203B 0%, #101327 100%)'>
+                  <Icon as={AiFillLinkedin} w='26px' h='26px' color='white' />
                 </IconBox>
               </Link>
               <Link href='https://pinterest.com/simmmple_web/' target='_blank'>
-                <IconBox w='48px' h='48px' borderRadius='30px' bg='#fff'>
-                  <Icon as={BsPinterest} w='26px' h='26px' color='brand.300' />
+                <IconBox
+                  w='48px'
+                  h='48px'
+                  borderRadius='30px'
+                  bg='linear-gradient(180deg, #1A203B 0%, #101327 100%)'>
+                  <Icon as={BsPinterest} w='26px' h='26px' color='white' />
                 </IconBox>
               </Link>
               <Link href='https://www.tiktok.com/@simmmple.web' target='_blank'>
-                <IconBox w='48px' h='48px' borderRadius='30px' bg='#fff'>
-                  <Icon as={FaTiktok} w='26px' h='26px' color='brand.300' />
+                <IconBox
+                  w='48px'
+                  h='48px'
+                  borderRadius='30px'
+                  bg='linear-gradient(180deg, #1A203B 0%, #101327 100%)'>
+                  <Icon as={FaTiktok} w='26px' h='26px' color='white' />
                 </IconBox>
               </Link>
             </Stack>
             <Flex
               direction={{ sm: "column", md: "row", lg: "column" }}
               alignSelf={{ sm: "center", lg: "flex-end" }}>
-              <Text fontSize='sm' color='#878CBD'>
-                <Text as='span' color='brand.700' fontWeight='normal'>
+              <Text fontSize='sm' color='#C5C9EB'>
+                <Text as='span' color='white' fontWeight='normal'>
                   &copy; {1900 + new Date().getYear()} Simmmple
                 </Text>
                 , all rights reserved.
               </Text>
               <Text
                 fontSize='sm'
-                color='#878CBD'
+                color='#C5C9EB'
                 alignSelf='flex-end'
                 ms={{ md: "2px", lg: "0px" }}>
                 Made with ❤️ for a better UI process.

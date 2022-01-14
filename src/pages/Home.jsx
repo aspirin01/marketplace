@@ -134,7 +134,8 @@ const Home = () => {
               <FormControl>
                 <Flex
                   justify='space-between'
-                  bg='#fff'
+                  bg='transparent'
+                  border='1.6px solid #d4d4d4'
                   borderRadius='70px'
                   w='470px'
                   maxW='100%'
@@ -145,9 +146,10 @@ const Home = () => {
                     ref={inputValue}
                     placeholder='eg. Venus Design System'
                     boxShadow='none'
+                    color='#d4d4d4'
                     border='none'
                     _focus={{ border: "none" }}
-                    _placeholder={{ color: "#878CBD" }}
+                    _placeholder={{ color: "#d4d4d4" }}
                   />
                   <Button
                     type='submit'
@@ -156,7 +158,7 @@ const Home = () => {
                     _hover='none'
                     _active='none'
                     p='0px'>
-                    <SearchIcon w='18px' h='18px' color='#878CBD' />
+                    <SearchIcon w='18px' h='18px' color='#d4d4d4' />
                   </Button>
                 </Flex>
               </FormControl>
@@ -555,7 +557,7 @@ const Home = () => {
         </Flex>
 
         {/* Latest */}
-        <Flex bg='#F4F7FE' py='100px' px='20px'>
+        <Flex bg='#14182C' py='100px' px='20px'>
           <Flex direction='column' w='1170px' mx='auto'>
             <Flex justify='space-between' align='center' w='100%' mb='72px'>
               <Flex direction='column'>
@@ -612,7 +614,7 @@ const Home = () => {
         </Flex>
 
         {/* Resources */}
-        <Flex direction='column' bg='#fff'>
+        <Flex direction='column' >
           <Flex
             direction='column'
             w='1170px'
