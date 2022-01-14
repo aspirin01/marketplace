@@ -20,6 +20,10 @@ const ProductItem = ({
   return (
     <NavLink to={path}>
       <Card
+           background= 'rgba( 20, 24, 44, 0.0 )'
+           box-shadow='0 8px 32px 0 rgba( 31, 38, 135, 0.37 )'
+           backdrop-filter= 'blur( 50px )'
+
         onMouseEnter={() => {
           imageRef.current.style.transform =
             "translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1.1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)";
@@ -27,10 +31,13 @@ const ProductItem = ({
         onMouseLeave={() => {
           imageRef.current.style.transform =
             "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)";
+
         }}>
-        <CardBody>
+        <CardBody
+        >
           <Flex direction='column' w='100%'>
-            <Box w='100%' mb='30px' overflow='hidden' borderRadius='24px'>
+            <Box w='100%' mb='30px' overflow='hidden' borderRadius='24px'
+            >
               <Image
                 ref={imageRef}
                 src={image}
@@ -70,7 +77,7 @@ const ProductItem = ({
               p='0px 12px 0px 12px'
               alignSelf='flex-start'>
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 fontWeight='500'
                 textAlign='start'

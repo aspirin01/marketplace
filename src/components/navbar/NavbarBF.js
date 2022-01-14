@@ -111,7 +111,7 @@ function Navbar() {
         mb='100px'
         w='100%'
         position={scrolled ? "fixed" : "absolute"}
-        top={scrolled ? "0px" : { base: "100px", md: "80px" }}
+        top={scrolled ? "0px" : { base: "00px", md: "0px" }}
         zIndex='100'
         bg={
           secondary || scrolled

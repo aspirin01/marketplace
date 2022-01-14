@@ -75,7 +75,7 @@ const Home = () => {
       <Helmet>
         <title itemprop='name'>Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
       </Helmet>
-      <Flex direction='column' bg='#fff' maxW='100%' overflowX='hidden'>
+      <Flex direction='column' bg='#14182C' maxW='100%' overflowX='hidden'>
         {/* Hero */}
         <Flex
           minH={{ base: "800px", md: "870px" }}
@@ -166,41 +166,44 @@ const Home = () => {
 
         {/* Categories */}
         <Flex direction='column' maxW='1170px' mx='auto' px='20px'>
-          <Grid
-            templateColumns={{ base: "repeat(3, 1fr)", md: "repeat(6, 1fr)" }}
-            gap={{ base: "40px", lg: "70px" }}
-            align='center'
-            justify='center'
-            bg='#fff'
-            borderRadius='30px'
-            p={{ base: "45px 50px", lg: "45px 100px" }}
-            boxShadow='0px 18px 40px rgba(112, 144, 176, 0.12)'
-            w='100%'
-            transform='translateY(-50%)'
-            mb='50px'>
-            <Flex align='center' justify='center'>
-              <Image src={googleLogo} />
-            </Flex>
-            <Flex align='center' justify='center'>
-              <Image src={msnLogo} />
-            </Flex>
-            <Flex align='center' justify='center'>
-              <Image src={microsoftLogo} />
-            </Flex>
-            <Flex align='center' justify='center'>
-              <Image src={zohoLogo} />
-            </Flex>
-            <Flex align='center' justify='center'>
-              <Image src={georgiatechLogo} />
-            </Flex>
-            <Flex align='center' justify='center'>
-              <Image src={deloitteLogo} />
-            </Flex>
-          </Grid>
+        <Grid
+          mx={{ base: "20px", xl: "auto" }}
+          templateColumns={{ base: "repeat(3, 1fr)", md: "repeat(6, 1fr)" }}
+          gap={{ base: "40px", lg: "70px" }}
+          align='center'
+          justify='center'
+          border='2px solid rgba(255, 255, 255, 0.11)'
+          bg='linear-gradient(117.45deg, rgba(20, 24, 44, 0.5) -3.91%, rgba(20, 24, 44, 0.5) 75.27%)'
+          backdropFilter='blur(42px)'
+          borderRadius='30px'
+          p={{ base: "45px 50px", lg: "45px 100px" }}
+          w={{ base: "unset", xl: "100%" }}
+          maxW={{ base: "100%", xl: "1170px" }}
+          transform='translateY(-50%)'
+          mb='50px'>
+          <Flex align='center' justify='center'>
+            <Image src={googleLogo} />
+          </Flex>
+          <Flex align='center' justify='center'>
+            <Image src={msnLogo} />
+          </Flex>
+          <Flex align='center' justify='center'>
+            <Image src={microsoftLogo} />
+          </Flex>
+          <Flex align='center' justify='center'>
+            <Image src={zohoLogo} />
+          </Flex>
+          <Flex align='center' justify='center'>
+            <Image src={georgiatechLogo} />
+          </Flex>
+          <Flex align='center' justify='center'>
+            <Image src={deloitteLogo} />
+          </Flex>
+        </Grid>
           <Flex direction='column' pb='100px'>
             <Text
               fontSize='xs'
-              color='brand.300'
+              color='#F6AB3E'
               fontWeight='bold'
               mb='16px'
               letterSpacing='2px'>
@@ -210,7 +213,7 @@ const Home = () => {
               fontSize='34px'
               lineHeight='44px'
               letterSpacing='-1px'
-              color='brand.700'
+              color='#fff'
               fontWeight='500'
               mb='58px'>
               Browse popular categories
@@ -223,7 +226,9 @@ const Home = () => {
               }}
               gap='20px'
               w='100%'>
-              <Card>
+              <Card
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+              >
                 <CardBody minH='300px'>
                   <Flex
                     direction='column'
@@ -235,24 +240,25 @@ const Home = () => {
                       <Image src={figmaLogo} w='100%' h='100%' />
                     </Box>
                     <Text
-                      color='brand.700'
+                      color='white'
                       fontWeight='500'
                       fontSize='22px'
                       mb='12px'>
                       Figma Products
                     </Text>
                     <NavLink to='/templates/figma'>
-                      <Flex align='center' color='brand.300'>
+                      <Flex align='center' color='#C5C9EB'>
                         <Text
                           fontSize='16px'
                           fontWeight='400'
-                          color='brand.300'
+                          color='#C5C9EB'
                           me='4px'>
                           See all products
                         </Text>
                         <Icon
                           as={MdKeyboardArrowRight}
                           w='14px'
+                          color='#C5C9EB'
                           h='14px'
                           mt='4px'
                         />
@@ -261,7 +267,9 @@ const Home = () => {
                   </Flex>
                 </CardBody>
               </Card>
-              <Card>
+              <Card
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+              >
                 <CardBody minH='300px'>
                   <Flex
                     direction='column'
@@ -273,18 +281,18 @@ const Home = () => {
                       <Image src={vscodeLogo} w='100%' h='100%' />
                     </Box>
                     <Text
-                      color='brand.700'
+                      color='white'
                       fontWeight='500'
                       fontSize='22px'
                       mb='12px'>
                       Coded Products
                     </Text>
                     <NavLink to='/templates/all-templates'>
-                      <Flex align='center' color='brand.300'>
+                      <Flex align='center' color='#C5C9EB'>
                         <Text
                           fontSize='16px'
                           fontWeight='400'
-                          color='brand.300'
+                          color='#C5C9EB'
                           me='4px'>
                           See all products
                         </Text>
@@ -299,7 +307,9 @@ const Home = () => {
                   </Flex>
                 </CardBody>
               </Card>
-              <Card>
+              <Card
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+              >
                 <CardBody minH='300px'>
                   <Flex
                     direction='column'
@@ -311,18 +321,18 @@ const Home = () => {
                       <Image src={mailLogo} w='100%' h='100%' />
                     </Box>
                     <Text
-                      color='brand.700'
+                      color='white'
                       fontWeight='500'
                       fontSize='22px'
                       mb='12px'>
                       Articles & Guides
                     </Text>
                     <Link href='https://blog.simmmple.com'>
-                      <Flex align='center' color='brand.300'>
+                      <Flex align='center' color='#C5C9EB'>
                         <Text
                           fontSize='16px'
                           fontWeight='400'
-                          color='brand.300'
+                          color='#C5C9EB'
                           me='4px'>
                           Learn more
                         </Text>
@@ -337,7 +347,9 @@ const Home = () => {
                   </Flex>
                 </CardBody>
               </Card>
-              <Card>
+              <Card
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+              >
                 <CardBody minH='300px'>
                   <Flex
                     direction='column'
@@ -349,18 +361,18 @@ const Home = () => {
                       <Image src={simmmpleButtonLogo} w='100%' h='100%' />
                     </Box>
                     <Text
-                      color='brand.700'
+                      color='white'
                       fontWeight='500'
                       fontSize='22px'
                       mb='12px'>
                       Apps & Plugins
                     </Text>
                     <NavLink to='/apps'>
-                      <Flex align='center' color='brand.300'>
+                      <Flex align='center' color='#C5C9EB'>
                         <Text
                           fontSize='16px'
                           fontWeight='400'
-                          color='brand.300'
+                          color='#C5C9EB'
                           me='4px'>
                           Learn more
                         </Text>
@@ -380,13 +392,17 @@ const Home = () => {
         </Flex>
 
         {/* Featured */}
-        <Flex bg='#F4F7FE' py='100px' overflowX='hidden' px='20px'>
+        <Flex
+
+        bg='rgba(255, 255, 255, 0)'
+        backdropFilter='blur(42px)'
+         py='100px' overflowX='hidden' px='20px'>
           <Flex direction='column' w='1170px' mx='auto'>
             <Flex justify='space-between' align='center' w='100%' mb='72px'>
               <Flex direction='column'>
                 <Text
                   fontSize='xs'
-                  color='brand.300'
+                  color='#F6AB3E'
                   fontWeight='bold'
                   mb='16px'
                   letterSpacing='2px'>
@@ -396,42 +412,59 @@ const Home = () => {
                   fontSize='34px'
                   lineHeight='44px'
                   letterSpacing='-1px'
-                  color='brand.700'
+                  color='white'
                   fontWeight='500'>
                   Featured products
                 </Text>
               </Flex>
 
               <NavLink to='/templates/all-templates'>
-                <Button
-                  bg='#fff'
-                  w='190px'
-                  h='56px'
-                  display={{ base: "none", md: "flex" }}
-                  _hover={{
-                    bg: "#ECE9FF",
-                  }}
-                  _active={{
-                    bg: "#ECE9FF",
-                  }}>
-                  <Text color='brand.300' fontWeight='500' fontSize='sm'>
+                 <Button
+                        color='white'
+                        bg='none'
+                        border='1px solid white'
+                        _hover={{
+                          bg: "none",
+                          opacity: "0.8",
+                        }}
+                        _active={{
+                          bg: "none",
+                          opacity: "0.8",
+                        }}
+                        fontWeight='500'
+                        fontSize='sm'
+                        lineHeight='14px'
+                        h='56px'
+                        w='190px'>
+
                     Explore all Products
-                  </Text>
+
                 </Button>
               </NavLink>
             </Flex>
             <ProductList products={featuredProducts} />
             <NavLink to='/templates/all-templates'>
               <Button
-                bg='#fff'
-                w='190px'
-                h='56px'
+           color='white'
+           bg='none'
+           border='1px solid white'
+           _hover={{
+            bg: "none",
+            opacity: "0.8",
+          }}
+          _active={{
+            bg: "none",
+            opacity: "0.8",
+          }}
+          fontWeight='500'
+          fontSize='sm'
+          lineHeight='14px'
+          h='56px'
+          w='190px'
                 display={{ base: "flex", md: "none" }}
                 mt='50px'
                 mx='auto'>
-                <Text color='brand.300' fontWeight='500' fontSize='sm'>
                   Explore all Products
-                </Text>
               </Button>
             </NavLink>
           </Flex>
@@ -528,7 +561,7 @@ const Home = () => {
               <Flex direction='column'>
                 <Text
                   fontSize='xs'
-                  color='brand.300'
+                  color='#C5C9EB'
                   fontWeight='bold'
                   mb='16px'
                   letterSpacing='2px'>
@@ -538,7 +571,7 @@ const Home = () => {
                   fontSize='34px'
                   lineHeight='44px'
                   letterSpacing='-1px'
-                  color='brand.700'
+                  color='white'
                   fontWeight='500'>
                   Latest products
                 </Text>
@@ -555,7 +588,7 @@ const Home = () => {
                     bg: "#ECE9FF",
                   }}
                   display={{ base: "none", md: "flex" }}>
-                  <Text color='brand.300' fontWeight='500' fontSize='sm'>
+                  <Text color='#C5C9EB' fontWeight='500' fontSize='sm'>
                     Explore all Products
                   </Text>
                 </Button>
@@ -570,7 +603,7 @@ const Home = () => {
                 display={{ base: "flex", md: "none" }}
                 mx='auto'
                 mt='40px'>
-                <Text color='brand.300' fontWeight='500' fontSize='sm'>
+                <Text color='#C5C9EB' fontWeight='500' fontSize='sm'>
                   Explore all Products
                 </Text>
               </Button>
@@ -596,7 +629,7 @@ const Home = () => {
               mb='72px'>
               <Text
                 fontSize='xs'
-                color='brand.300'
+                color='#C5C9EB'
                 fontWeight='bold'
                 mb='16px'
                 letterSpacing='2px'>
@@ -604,7 +637,7 @@ const Home = () => {
               </Text>
               <Text
                 fontSize='34px'
-                color='brand.700'
+                color='white'
                 fontWeight='bold'
                 mb='20px'>
                 Discover resources & guides
@@ -639,7 +672,7 @@ const Home = () => {
                         bgSize='cover'
                         bgPosition='center'></Flex>
                       <Tag
-                        color='brand.300'
+                        color='#C5C9EB'
                         bg='#ECE9FF'
                         borderRadius='30px'
                         p='7px 14px'
@@ -648,7 +681,7 @@ const Home = () => {
                         Articles
                       </Tag>
                       <Text
-                        color='brand.700'
+                        color='white'
                         fontSize='lg'
                         fontWeight='500'
                         mb='14px'>
@@ -680,7 +713,7 @@ const Home = () => {
                         bgSize='cover'
                         bgPosition='center'></Flex>
                       <Tag
-                        color='brand.300'
+                        color='#C5C9EB'
                         bg='#ECE9FF'
                         borderRadius='30px'
                         p='7px 14px'
@@ -689,7 +722,7 @@ const Home = () => {
                         Articles
                       </Tag>
                       <Text
-                        color='brand.700'
+                        color='white'
                         fontSize='lg'
                         fontWeight='500'
                         mb='14px'>
@@ -722,7 +755,7 @@ const Home = () => {
                         bgSize='cover'
                         bgPosition='center'></Flex>
                       <Tag
-                        color='brand.300'
+                        color='#C5C9EB'
                         bg='#ECE9FF'
                         borderRadius='30px'
                         p='7px 14px'
@@ -731,7 +764,7 @@ const Home = () => {
                         Articles
                       </Tag>
                       <Text
-                        color='brand.700'
+                        color='white'
                         fontSize='lg'
                         fontWeight='500'
                         mb='14px'>
@@ -760,7 +793,7 @@ const Home = () => {
                 _active={{
                   bg: "#ECE9FF",
                 }}>
-                <Text color='brand.300' fontSize='sm'>
+                <Text color='#C5C9EB' fontSize='sm'>
                   Learn more
                 </Text>
               </Button>

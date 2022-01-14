@@ -9,7 +9,7 @@ export const globalStyles = {
     global: () => ({
       body: {
         bg: "white",
-        fontFamily: "Plus Jakarta Display",
+       fontFamily: 'Lexend Deca',
       },
       input: {
         color: "gray.700",

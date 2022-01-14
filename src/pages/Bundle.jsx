@@ -35,7 +35,6 @@ import microsoftLogo from "assets/img/homepage/microsoft-white.png";
 import msnLogo from "assets/img/homepage/msn-white.png";
 import zohoLogo from "assets/img/homepage/zoho-white.png";
 // Custom Components
-import PromotionBF from "components/promotion/PromotionBF";
 import NavbarBF from "components/navbar/NavbarBF";
 import FooterBF from "components/footer/FooterBF";
 import Card from "components/card/Card";
@@ -106,7 +105,6 @@ const Bundles = () => {
         <title itemprop='name'>
           Winter Promotion 2021 - Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
       </Helmet>
-      <PromotionBF />
       <NavbarBF />
       <Flex direction='column' bg='#14182C' overflowX='hidden'>
         <Flex
