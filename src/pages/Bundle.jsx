@@ -13,15 +13,13 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 // Images
-import bundlesBg from "assets/img/bundles/bundles-background.png";
-import stars from "assets/img/bundles/bundles-stars.png";
+import bundlesBg from "assets/img/bundles/bf-background.png";
+import stars from "assets/img/bundles/bundles-stars-bf.png";
 import developers from "assets/img/bundles/developers.png";
 import medal from "assets/img/bundles/medal.png";
 import purity from "assets/img/bundles/purity.png";
 import purityresponsive from "assets/img/bundles/purityresponsive.png";
-import sensualBg from "assets/img/bundles/sensual-background.png";
-// import sensual from "assets/img/bundles/sensual.png";
-// import sensualresponsive from "assets/img/bundles/sensualresponsive.png";
+// import sensualBg from "assets/img/bundles/sensual-background.png";
 import simmmpleFolder from "assets/img/bundles/simmmple-folder.png";
 import trophy from "assets/img/bundles/trophy.png";
 import uranus from "assets/img/bundles/uranus.png";
@@ -30,13 +28,16 @@ import vdb from "assets/img/bundles/vdb.png";
 import vdbresponsive from "assets/img/bundles/vdbresponsive.png";
 import venus from "assets/img/bundles/venus.png";
 import venusresponsive from "assets/img/bundles/venusresponsive.png";
-import deloitteLogo from "assets/img/homepage/deloitte.png";
-import georgiatechLogo from "assets/img/homepage/georgiatech.png";
-import googleLogo from "assets/img/homepage/google.png";
-import microsoftLogo from "assets/img/homepage/microsoft.png";
-import msnLogo from "assets/img/homepage/msn.png";
-import zohoLogo from "assets/img/homepage/zoho.png";
+import deloitteLogo from "assets/img/homepage/deloitte-white.png";
+import georgiatechLogo from "assets/img/homepage/georgiatech-white.png";
+import googleLogo from "assets/img/homepage/google-white.png";
+import microsoftLogo from "assets/img/homepage/microsoft-white.png";
+import msnLogo from "assets/img/homepage/msn-white.png";
+import zohoLogo from "assets/img/homepage/zoho-white.png";
 // Custom Components
+import PromotionBF from "components/promotion/PromotionBF";
+import NavbarBF from "components/navbar/NavbarBF";
+import FooterBF from "components/footer/FooterBF";
 import Card from "components/card/Card";
 import CardBody from "components/card/CardBody";
 import Countdown from "components/countdown/Countdown";
@@ -52,7 +53,7 @@ import {
   SimmmpleLogoBundle,
   WarningM,
 } from "components/icons/Icons";
-import Layout from "components/layout/Layout";
+// import Layout from "components/layout/Layout";
 import { HSeparator } from "components/separator/Separator";
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -100,12 +101,14 @@ const Bundles = () => {
   } = useDisclosure();
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title itemprop='name'>
-          Bundles - Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
+          Winter Promotion 2021 - Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
       </Helmet>
-      <Flex direction='column' bg='#fff' overflowX='hidden'>
+      <PromotionBF />
+      <NavbarBF />
+      <Flex direction='column' bg='#14182C' overflowX='hidden'>
         <Flex
           px={{ base: "20px", xl: "0px" }}
           py={{ base: "140px", md: "0px" }}
@@ -127,12 +130,12 @@ const Bundles = () => {
               display={{ base: "none", xl: "flex" }}
             />
             <Text
-              fontSize={{ base: "41px", md: "64px" }}
+              fontSize={{ base: "34px", md: "64px" }}
               px={{ base: "10px", "2sm": "30px", md: "0px" }}
               color='#fff'
               fontWeight='bold'
               mb='25px'>
-              2 Years Anniversary Bundle
+              Winter Promotion 80%
             </Text>
             <Text
               color='#fff'
@@ -142,13 +145,13 @@ const Bundles = () => {
               mb='50px'>
               The most special and exclusive digital bundle which contains all
               of our premium products & tools that will help you design faster &
-              easier.{" "}
+              easier.
               <Text as='span' fontWeight='bold'>
-                Save up to 80%!
+                Save 80% now!
               </Text>
             </Text>
             <Box>
-              <Countdown date='24 November 2021' />
+              <Countdown date='20 January 2022' />
             </Box>
             <Flex align='center' mt={{ base: "34px", md: "54px" }}>
               <LeftButtonEffect
@@ -160,7 +163,7 @@ const Bundles = () => {
               />
               <Link href='#pricing'>
                 <Button
-                  bg='white'
+                  bg='linear-gradient(108.54deg, #FF416C 6.56%, #FF4B2B 95.2%)'
                   variant='solid'
                   w='190px'
                   h='56px'
@@ -172,8 +175,8 @@ const Bundles = () => {
                     leftEffect.current.style.transform = "translateX(5px)";
                     rightEffect.current.style.transform = "translateX(-5px)";
                   }}>
-                  <Text color='brand.700' fontSize='sm'>
-                    Save up to 80% now
+                  <Text color='white' fontSize='sm'>
+                    Save 80% now!
                   </Text>
                 </Button>
               </Link>
@@ -193,10 +196,11 @@ const Bundles = () => {
           gap={{ base: "40px", lg: "70px" }}
           align='center'
           justify='center'
-          bg='#fff'
+          border='2px solid rgba(255, 255, 255, 0.11)'
+          bg='linear-gradient(117.45deg, rgba(20, 24, 44, 0.5) -3.91%, rgba(20, 24, 44, 0.5) 75.27%)'
+          backdropFilter='blur(42px)'
           borderRadius='30px'
           p={{ base: "45px 50px", lg: "45px 100px" }}
-          boxShadow='0px 18px 40px rgba(112, 144, 176, 0.12)'
           w={{ base: "unset", xl: "100%" }}
           maxW={{ base: "100%", xl: "1170px" }}
           transform='translateY(-50%)'
@@ -230,18 +234,18 @@ const Bundles = () => {
           <Flex direction='column' align='center' w='100%' mb='72px' mx='auto'>
             <Text
               fontSize='xs'
-              color='brand.300'
+              color='#F6AB3E'
               fontWeight='bold'
               mb='16px'
               letterSpacing='2px'
               textAlign='center'>
-              EXCLUSIVE DIGITAL BUNDLE BENEFITS
+              WINTER PROMOTION BUNDLE BENEFITS
             </Text>
             <Text
               fontSize='34px'
               lineHeight='44px'
               letterSpacing='-1px'
-              color='brand.700'
+              color='white'
               fontWeight='500'
               mb='20px'
               mx='auto'
@@ -251,7 +255,7 @@ const Bundles = () => {
             <Text
               fontSize='md'
               lineHeight='28px'
-              color='#878CBD'
+              color='#C5C9EB'
               fontWeight='400'
               mx='auto'
               textAlign='center'
@@ -268,7 +272,10 @@ const Bundles = () => {
             gap='20px'
             w='100%'
             px={{ base: "20px", xl: "0px" }}>
-            <Card h='320px' me='20px'>
+            <Card
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+              h='320px'
+              me='20px'>
               <CardBody h='100%' py='12px' justify='space-between' px='20px'>
                 <Flex
                   flexDirection='column'
@@ -281,21 +288,24 @@ const Bundles = () => {
                     fontWeight='700'
                     mb='10px'
                     fontSize='38px'
-                    color='brand.700'>
+                    color='white'>
                     4,000+
                   </Text>
                   <Text
                     textAlign='center'
                     fontSize='md'
                     lineHeight='28px'
-                    color='#878CBD'
+                    color='#C5C9EB'
                     fontWeight='400'>
                     Coded & Designed Components and Elements
                   </Text>
                 </Flex>
               </CardBody>
             </Card>
-            <Card h='320px' me='20px'>
+            <Card
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+              h='320px'
+              me='20px'>
               <CardBody h='100%' py='12px' justify='space-between' px='20px'>
                 <Flex
                   flexDirection='column'
@@ -318,21 +328,24 @@ const Bundles = () => {
                     fontWeight='700'
                     mb='10px'
                     fontSize='38px'
-                    color='brand.700'>
+                    color='white'>
                     4.9/5
                   </Text>
                   <Text
                     textAlign='center'
                     fontSize='md'
                     lineHeight='28px'
-                    color='#878CBD'
+                    color='#C5C9EB'
                     fontWeight='400'>
                     Reviews from developers & designers all over the world
                   </Text>
                 </Flex>
               </CardBody>
             </Card>
-            <Card h='320px' me='20px'>
+            <Card
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+              h='320px'
+              me='20px'>
               <CardBody h='100%' py='12px' justify='space-between' px='20px'>
                 <Flex
                   flexDirection='column'
@@ -345,21 +358,23 @@ const Bundles = () => {
                     fontWeight='700'
                     mb='10px'
                     fontSize='38px'
-                    color='brand.700'>
+                    color='white'>
                     10,000+
                   </Text>
                   <Text
                     textAlign='center'
                     fontSize='md'
                     lineHeight='28px'
-                    color='#878CBD'
+                    color='#C5C9EB'
                     fontWeight='400'>
                     Developers & Designers that use our digital products
                   </Text>
                 </Flex>
               </CardBody>
             </Card>
-            <Card h='320px'>
+            <Card
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+              h='320px'>
               <CardBody h='100%' py='12px' px='18px'>
                 <Flex
                   flexDirection='column'
@@ -373,14 +388,14 @@ const Bundles = () => {
                     fontWeight='700'
                     mb='10px'
                     fontSize='38px'
-                    color='brand.700'>
+                    color='white'>
                     Lifetime
                   </Text>
                   <Text
                     textAlign='center'
                     fontSize='md'
                     lineHeight='28px'
-                    color='#878CBD'
+                    color='#C5C9EB'
                     fontWeight='400'>
                     We offer Lifetime License for all products of this bundle
                   </Text>
@@ -404,31 +419,32 @@ const Bundles = () => {
             mx='auto'>
             <Text
               fontSize='xs'
-              color='brand.300'
+              color='#F6AB3E'
               fontWeight='bold'
               mb='16px'
               letterSpacing='2px'
               textAlign='center'>
-              WHAT EXCLUSIVE DIGITAL BUNDLE CONTAINS
+              WINTER PROMOTION BUNDLE BENEFITS
             </Text>
             <Text
               fontSize='34px'
               lineHeight='44px'
               letterSpacing='-1px'
-              color='brand.700'
+              color='white'
               fontWeight='500'
               mb='20px'
               mx='auto'
               textAlign='center'>
-              What Exclusive Digital Bundle contains?
+              What Winter Promotion Bundle contains?
             </Text>
             <Text
               fontSize='md'
               lineHeight='28px'
-              color='#878CBD'
+              color='#C5C9EB'
               fontWeight='400'
               mx='auto'
-              textAlign='center'>
+              textAlign='center'
+              px={{ base: "30px", md: "0px" }}>
               Well... a lot of cool things, like most of our premium digital
               products.
             </Text>
@@ -486,7 +502,7 @@ const Bundles = () => {
                   h={{ base: "220%", xl: "110%" }}
                   left='50%'
                   top='50%'
-                  src={sensualBg}
+                  bg='linear-gradient(180deg, #242A49 0%, #0C0F1F 100%, #0C0F1F 100%)'
                   filter='blur(40px)'
                   zIndex='1'
                 />
@@ -599,8 +615,14 @@ const Bundles = () => {
                     flexDirection={{ base: "column", md: "row" }}>
                     <Link href='https://www.figma.com/file/WGfCeWMB5HMT65TVIfPOFw/Venus---Design-System-PRO-2021-(Live-Preview)?node-id=414%3A146'>
                       <Button
-                        bg='white'
-                        color='#020425'
+                        bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+                        _hover={{
+                          bg: "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                        }}
+                        _active={{
+                          bg: "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                        }}
+                        color='white'
                         fontWeight='500'
                         fontSize='sm'
                         me={{ base: "0px", md: "20px" }}
@@ -683,7 +705,7 @@ const Bundles = () => {
                 ps={{ md: "0px", xl: "70px" }}
                 pt={{ md: "80px", lg: "45px" }}
                 borderRadius='30px'
-                bg='linear-gradient(108.54deg, #FF416C 6.56%, #FF4B2B 95.2%)'>
+                bg='linear-gradient(180deg, #242A49 0%, #0C0F1F 100%, #0C0F1F 100%)'>
                 <Flex
                   w={{ md: "70%", lg: "88%", xl: "456px" }}
                   maxW='100%'
@@ -794,8 +816,14 @@ const Bundles = () => {
                     flexDirection={{ base: "column", md: "row" }}>
                     <Link href='https://www.figma.com/file/lFbkFkxt7CWerPOoGr1JlG/(Preview)-PRO-Version---Venus-Dashboard-Builder?node-id=102%3A1556'>
                       <Button
-                        bg='white'
-                        color='#FF4555'
+                        bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+                        _hover={{
+                          bg: "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                        }}
+                        _active={{
+                          bg: "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                        }}
+                        color='white'
                         fontWeight='500'
                         fontSize='sm'
                         me={{ base: "0px", md: "20px" }}
@@ -878,7 +906,7 @@ const Bundles = () => {
                 pe={{ md: "0px", xl: "40px" }}
                 pt={{ md: "60px", lg: "45px" }}
                 borderRadius='30px'
-                background='linear-gradient(180deg, #7BCBD4 0%, #29C6B7 100%)'>
+                bg='linear-gradient(180deg, #242A49 0%, #0C0F1F 100%, #0C0F1F 100%)'>
                 <Flex
                   w={{ md: "70%", lg: "88%", xl: "456px" }}
                   maxW='100%'
@@ -988,8 +1016,14 @@ const Bundles = () => {
                     flexDirection={{ base: "column", md: "row" }}>
                     <Link href='https://demos.creative-tim.com/purity-ui-dashboard-pro/?ref=simmmple'>
                       <Button
-                        bg='white'
-                        color='#30C7BA'
+                        bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+                        _hover={{
+                          bg: "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                        }}
+                        _active={{
+                          bg: "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                        }}
+                        color='white'
                         fontWeight='500'
                         fontSize='sm'
                         me={{ base: "0px", md: "20px" }}
@@ -1072,7 +1106,7 @@ const Bundles = () => {
                 ps={{ md: "0px", xl: "70px" }}
                 pt={{ md: "60px", lg: "45px" }}
                 borderRadius='30px'
-                background='linear-gradient(135deg, #868CFF 0%, #4318FF 100%)'>
+                bg='linear-gradient(180deg, #242A49 0%, #0C0F1F 100%, #0C0F1F 100%)'>
                 <Flex
                   w={{ md: "70%", lg: "88%", xl: "456px" }}
                   maxW='100%'
@@ -1185,8 +1219,14 @@ const Bundles = () => {
                     flexDirection={{ base: "column", md: "row" }}>
                     <Link href='https://www.figma.com/file/bDcEEGqDi8K4taSulPCdrH/Uranus-v1.3---Wireframe-Kit---Preview?node-id=376%3A127'>
                       <Button
-                        bg='white'
-                        color='#634FFF'
+                        bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+                        _hover={{
+                          bg: "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                        }}
+                        _active={{
+                          bg: "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                        }}
+                        color='white'
                         fontWeight='500'
                         fontSize='sm'
                         me={{ base: "0px", md: "20px" }}
@@ -1459,7 +1499,7 @@ const Bundles = () => {
           <Flex direction='column' align='center' w='100%' mb='72px' mx='auto'>
             <Text
               fontSize='xs'
-              color='brand.300'
+              color='#F6AB3E'
               fontWeight='bold'
               mb='16px'
               letterSpacing='2px'
@@ -1470,7 +1510,7 @@ const Bundles = () => {
               fontSize='34px'
               lineHeight='44px'
               letterSpacing='-1px'
-              color='brand.700'
+              color='white'
               fontWeight='500'
               mb='20px'
               mx='auto'
@@ -1482,7 +1522,7 @@ const Bundles = () => {
             <Text
               fontSize='md'
               lineHeight='28px'
-              color='#878CBD'
+              color='#C5C9EB'
               fontWeight='400'
               mx='auto'
               textAlign='center'>
@@ -1498,9 +1538,10 @@ const Bundles = () => {
             <Card
               maxW={{ base: "100%", md: "395px", xl: "unset" }}
               h={{ base: "unset", xl: "735px" }}
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
               me={{ base: "0px", xl: "20px" }}
               mb={{ base: "20px", xl: "0px" }}
-              boxShadow='50px 45px 76px 0px #7090B01A'>
+              boxShadow='unset'>
               <CardBody
                 h='100%'
                 pb={{ base: "0px", md: "34px" }}
@@ -1510,7 +1551,7 @@ const Bundles = () => {
                   <Flex align='center' mb='5px'>
                     <Text
                       me='5px'
-                      color='brand.700'
+                      color='white'
                       fontSize='22px'
                       lineHeight='28px'
                       fontWeight='500'
@@ -1520,7 +1561,7 @@ const Bundles = () => {
                     <NavLink to='/licenses'>
                       <HelpOutline
                         w='18px'
-                        color='brand.700'
+                        color='white'
                         mt='5px'
                         cursor='pointer'
                         onMouseEnter={onOpenFreelancer}
@@ -1559,7 +1600,7 @@ const Bundles = () => {
                   </Flex>
                   <Flex align='center' mb='22px'>
                     <Text
-                      color='brand.700'
+                      color='white'
                       fontSize='52px'
                       lineHeight='67px'
                       fontWeight='700'
@@ -1568,7 +1609,7 @@ const Bundles = () => {
                     </Text>
                     <Flex flexDirection='column'>
                       <Text
-                        color='brand.700'
+                        color='white'
                         fontSize='16px'
                         lineHeight='21px'
                         textDecoration='line-through'>
@@ -1576,23 +1617,22 @@ const Bundles = () => {
                       </Text>
                       <Text
                         fontWeight='500'
-                        color='#009B73'
+                        color='#F6AB3E'
                         fontSize='16px'
                         lineHeight='20px'>
-                        Save up to 80%
+                        80% discount!
                       </Text>
                     </Flex>
                   </Flex>
 
                   <Text
                     mb='46px'
-                    color='#878CBD'
+                    color='#C5C9EB'
                     fontSize='md'
                     lineHeight='28px'
                     letterSpacing='-0.5px'>
-                    Perfect for personal use and for your side projects. A
-                    single license for solo designers, developers and
-                    freelancers.
+                    Relevant for large-scale uses and extended redistribution
+                    rights. A license for large companies working on projects.
                   </Text>
                   <Flex flexDirection='column'>
                     <Flex align='center' mb='40px'>
@@ -1602,7 +1642,7 @@ const Bundles = () => {
                       <Text
                         fontSize='18px'
                         display='flex'
-                        color='#02044A'
+                        color='white'
                         letterSpacing='-0.5px'>
                         Full Documentation
                       </Text>
@@ -1615,9 +1655,9 @@ const Bundles = () => {
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Projects:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           {" "}
                           1/Product
                         </Text>
@@ -1631,9 +1671,9 @@ const Bundles = () => {
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Team size:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           1 Developer
                         </Text>
                       </Text>
@@ -1647,9 +1687,9 @@ const Bundles = () => {
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Premium support:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           8 Months
                         </Text>
                       </Text>
@@ -1662,9 +1702,9 @@ const Bundles = () => {
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Free updates:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           8 Months
                         </Text>
                       </Text>
@@ -1672,16 +1712,21 @@ const Bundles = () => {
                   </Flex>
                   <Link
                     min='100%'
-                    href='https://simmmple.gumroad.com/l/simmmple-bundle?variant=Freelancer'>
+                    href='https://simmmple.gumroad.com/l/simmmple-bf?variant=Freelancer'>
                     <Button
                       minH='56px'
-                      bg='brand.300'
+                      boxShadow='unset'
+                      bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
                       fontWeight='500'
                       w='100%'
                       color='white'
                       fontSize='sm'
-                      _hover={{ bg: "#1A05B7" }}
-                      _active={{ bg: "#1A05B7" }}>
+                      _hover={{
+                        bg: "#linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                      }}
+                      _active={{
+                        bg: "#linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                      }}>
                       Buy it now
                     </Button>
                   </Link>
@@ -1691,11 +1736,12 @@ const Bundles = () => {
             <Card
               maxW={{ base: "100%", md: "395px", xl: "unset" }}
               h={{ base: "unset", xl: "743px" }}
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
               mb={{ base: "20px", xl: "0px" }}
               me={{ base: "0px", xl: "20px" }}
               border='4px solid'
-              borderColor='brand.300'
-              boxShadow='50px 45px 76px 0px #7090B01A'>
+              borderColor='#FF1D50'
+              boxShadow='unset'>
               <CardBody
                 h='100%'
                 pb={{ base: "0px", md: "34px" }}
@@ -1705,7 +1751,7 @@ const Bundles = () => {
                   <Flex align='center' mb='5px'>
                     <Text
                       me='5px'
-                      color='brand.300'
+                      color='#FF1D50'
                       fontSize='22px'
                       lineHeight='28px'
                       fontWeight='500'
@@ -1715,7 +1761,7 @@ const Bundles = () => {
                     <NavLink to='/licenses'>
                       <HelpOutline
                         w='18px'
-                        color='brand.700'
+                        color='#FF1D50'
                         mt='5px'
                         onMouseEnter={onOpenCompany}
                         onMouseLeave={onCloseCompany}
@@ -1752,16 +1798,16 @@ const Bundles = () => {
                   </Flex>
                   <Flex align='center' mb='22px'>
                     <Text
-                      color='brand.300'
+                      color='white'
                       fontSize='52px'
                       lineHeight='67px'
                       fontWeight='700'
                       me='15px'>
-                      $409
+                      $217
                     </Text>
                     <Flex flexDirection='column'>
                       <Text
-                        color='brand.700'
+                        color='white'
                         fontSize='16px'
                         lineHeight='21px'
                         textDecoration='line-through'>
@@ -1769,17 +1815,17 @@ const Bundles = () => {
                       </Text>
                       <Text
                         fontWeight='500'
-                        color='#009B73'
+                        color='#F6AB3E'
                         fontSize='16px'
                         lineHeight='20px'>
-                        Save up to 63%
+                        80% discount!
                       </Text>
                     </Flex>
                   </Flex>
 
                   <Text
                     mb='46px'
-                    color='#878CBD'
+                    color='#C5C9EB'
                     fontSize='md'
                     lineHeight='28px'
                     letterSpacing='-0.5px'>
@@ -1788,75 +1834,75 @@ const Bundles = () => {
                   </Text>
                   <Flex flexDirection='column'>
                     <Flex align='center' mb='40px'>
-                      <IconBox w='28px' h='28px' bg='#F4F7FE' me='18px'>
-                        <Done color='brand.300' w='21px' />
+                      <IconBox w='28px' h='28px' bg='#FF1D50' me='18px'>
+                        <Done color='white' w='21px' />
                       </IconBox>
                       <Text
                         fontSize='18px'
                         display='flex'
-                        color='#02044A'
+                        color='white'
                         letterSpacing='-0.5px'>
                         Full Documentation
                       </Text>
                     </Flex>
                     <Flex align='center' mb='40px'>
-                      <IconBox w='28px' h='28px' bg='#F4F7FE' me='18px'>
-                        <Done color='brand.300' w='21px' />
+                      <IconBox w='28px' h='28px' bg='#FF1D50' me='18px'>
+                        <Done color='white' w='21px' />
                       </IconBox>
                       <Text
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Projects:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           {" "}
                           Unlimited
                         </Text>
                       </Text>
                     </Flex>
                     <Flex align='center' mb='40px'>
-                      <IconBox w='28px' h='28px' bg='#F4F7FE' me='18px'>
-                        <Done color='brand.300' w='21px' />
+                      <IconBox w='28px' h='28px' bg='#FF1D50' me='18px'>
+                        <Done color='white' w='21px' />
                       </IconBox>
                       <Text
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Team size:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           1-15 Developers
                         </Text>
                       </Text>
                       <Text fontSize='18px'> </Text>
                     </Flex>
                     <Flex align='center' mb='40px'>
-                      <IconBox w='28px' h='28px' bg='#F4F7FE' me='18px'>
-                        <Done color='brand.300' w='21px' />
+                      <IconBox w='28px' h='28px' bg='#FF1D50' me='18px'>
+                        <Done color='white' w='21px' />
                       </IconBox>
                       <Text
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Premium support:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           12 Months
                         </Text>
                       </Text>
                     </Flex>
                     <Flex align='center' mb='40px'>
-                      <IconBox w='28px' h='28px' bg='#F4F7FE' me='18px'>
-                        <Done color='brand.300' w='21px' />
+                      <IconBox w='28px' h='28px' bg='#FF1D50' me='18px'>
+                        <Done color='white' w='21px' />
                       </IconBox>
                       <Text
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Free updates:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           12 Months
                         </Text>
                       </Text>
@@ -1864,16 +1910,17 @@ const Bundles = () => {
                   </Flex>
                   <Link
                     w='100%'
-                    href='https://simmmple.gumroad.com/l/simmmple-bundle?variant=Team+License'>
+                    href='https://simmmple.gumroad.com/l/simmmple-bf?variant=Team+License'>
                     <Button
                       minH='56px'
-                      bg='brand.300'
+                      boxShadow='unset'
+                      bg='linear-gradient(108.54deg, #FF416C 6.56%, #FF4B2B 95.2%)'
                       fontWeight='500'
                       w='100%'
                       color='white'
                       fontSize='sm'
-                      _hover={{ bg: "#1A05B7" }}
-                      _active={{ bg: "#1A05B7" }}>
+                      _hover={{ bg: "linear-gradient(108.54deg, #FF416C 6.56%, #FF4B2B 95.2%)" }}
+                      _active={{ bg: "linear-gradient(108.54deg, #FF416C 6.56%, #FF4B2B 95.2%)" }}>
                       Buy it now
                     </Button>
                   </Link>
@@ -1883,7 +1930,8 @@ const Bundles = () => {
             <Card
               maxW={{ base: "100%", md: "395px", xl: "unset" }}
               h={{ base: "unset", xl: "735px" }}
-              boxShadow='50px 45px 76px 0px #7090B01A'>
+              bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+              boxShadow='unset'>
               <CardBody
                 h='100%'
                 pb={{ base: "0px", md: "34px" }}
@@ -1893,7 +1941,7 @@ const Bundles = () => {
                   <Flex align='center' mb='5px'>
                     <Text
                       me='5px'
-                      color='brand.700'
+                      color='white'
                       fontSize='22px'
                       lineHeight='28px'
                       fontWeight='500'>
@@ -1902,7 +1950,7 @@ const Bundles = () => {
                     <NavLink to='/licenses'>
                       <HelpOutline
                         w='18px'
-                        color='brand.700'
+                        color='white'
                         mt='5px'
                         onMouseEnter={onOpenEnterprise}
                         onMouseLeave={onCloseEnterprise}
@@ -1939,16 +1987,16 @@ const Bundles = () => {
                   </Flex>
                   <Flex align='center' mb='22px'>
                     <Text
-                      color='brand.700'
+                      color='white'
                       fontSize='52px'
                       lineHeight='67px'
                       fontWeight='700'
                       me='15px'>
-                      $879
+                      $389
                     </Text>
                     <Flex flexDirection='column'>
                       <Text
-                        color='brand.700'
+                        color='white'
                         fontSize='16px'
                         lineHeight='21px'
                         textDecoration='line-through'>
@@ -1956,10 +2004,10 @@ const Bundles = () => {
                       </Text>
                       <Text
                         fontWeight='500'
-                        color='#009B73'
+                        color='#F6AB3E'
                         fontSize='16px'
                         lineHeight='20px'>
-                        Save up to 55%
+                        80% discount!
                       </Text>
                     </Flex>
                   </Flex>
@@ -1970,8 +2018,9 @@ const Bundles = () => {
                     fontSize='md'
                     lineHeight='28px'
                     letterSpacing='-0.5px'>
-                    Relevant for large-scale uses and extended redistribution
-                    rights. A license for large companies working on projects.
+                    Perfect for personal use and for your side projects. A
+                    single license for solo designers, developers and
+                    freelancers.
                   </Text>
                   <Flex flexDirection='column'>
                     <Flex align='center' mb='40px'>
@@ -1981,7 +2030,7 @@ const Bundles = () => {
                       <Text
                         fontSize='18px'
                         display='flex'
-                        color='#02044A'
+                        color='white'
                         letterSpacing='-0.5px'>
                         Full Documentation
                       </Text>
@@ -1994,9 +2043,9 @@ const Bundles = () => {
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Projects:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           {" "}
                           Unlimited
                         </Text>
@@ -2010,9 +2059,9 @@ const Bundles = () => {
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Team size:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           Unlimited
                         </Text>
                       </Text>
@@ -2026,12 +2075,12 @@ const Bundles = () => {
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.8px'
-                        color='#02044A !important'>
+                        color='white !important'>
                         Premium support:
                         <Text
                           fontWeight='500'
                           ms='3px'
-                          color='#02044A !important'>
+                          color='white !important'>
                           24 Months
                         </Text>
                       </Text>
@@ -2044,9 +2093,9 @@ const Bundles = () => {
                         fontSize='18px'
                         display='flex'
                         letterSpacing='-0.5px'
-                        color='#02044A'>
+                        color='white'>
                         Free updates:
-                        <Text fontWeight='500' ms='5px' color='#02044A'>
+                        <Text fontWeight='500' ms='5px' color='white'>
                           24 Months
                         </Text>
                       </Text>
@@ -2054,16 +2103,21 @@ const Bundles = () => {
                   </Flex>
                   <Link
                     w='100%'
-                    href='https://simmmple.gumroad.com/l/simmmple-bundle?variant=Enterprise'>
+                    href='https://simmmple.gumroad.com/l/simmmple-bf?variant=Enterprise'>
                     <Button
                       minH='56px'
-                      bg='brand.300'
+                      boxShadow='unset'
+                      bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
                       fontWeight='500'
                       w='100%'
                       color='white'
                       fontSize='sm'
-                      _hover={{ bg: "#1A05B7" }}
-                      _active={{ bg: "#1A05B7" }}>
+                      _hover={{
+                        bg: "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                      }}
+                      _active={{
+                        bg: "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)",
+                      }}>
                       Buy it now
                     </Button>
                   </Link>
@@ -2148,18 +2202,18 @@ const Bundles = () => {
           <Flex direction='column' align='center' w='100%' mb='72px' mx='auto'>
             <Text
               fontSize='xs'
-              color='brand.300'
+              color='#F6AB3E'
               fontWeight='bold'
               mb='16px'
               letterSpacing='2px'
               textAlign='center'>
-              EXCLUSIVE DIGITAL BUNDLE FAQS
+              Winter Promotion BUNDLE FAQS
             </Text>
             <Text
               fontSize='34px'
               lineHeight='44px'
               letterSpacing='-1px'
-              color='brand.700'
+              color='white'
               fontWeight='500'
               mb='20px'
               mx='auto'
@@ -2182,7 +2236,7 @@ const Bundles = () => {
               me={{ base: "auto", xl: "50px" }}>
               {/* 1. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2192,7 +2246,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='72px'
@@ -2205,7 +2259,7 @@ const Bundles = () => {
                 <NavLink to='/contact'>
                   <Text
                     textDecoration='underline'
-                    color='brand.300'
+                    color='#F6AB3E'
                     fontWeight='500'
                     as='span'
                     mx='3px'>
@@ -2217,7 +2271,7 @@ const Bundles = () => {
               </Text>
               {/* 2. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2228,7 +2282,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='16px'
@@ -2240,7 +2294,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='16px'
@@ -2252,7 +2306,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='16px'
@@ -2264,7 +2318,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='72px'
@@ -2273,7 +2327,7 @@ const Bundles = () => {
                 <NavLink to='/licenses'>
                   <Text
                     textDecoration='underline'
-                    color='brand.300'
+                    color='#F6AB3E'
                     fontWeight='500'
                     as='span'
                     mx='3px'>
@@ -2284,7 +2338,7 @@ const Bundles = () => {
               </Text>
               {/* 3. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2294,7 +2348,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='72px'
@@ -2305,7 +2359,7 @@ const Bundles = () => {
               </Text>
               {/* 4. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2315,7 +2369,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='72px'
@@ -2325,7 +2379,7 @@ const Bundles = () => {
               </Text>
               {/* 5. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2336,7 +2390,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='72px'
@@ -2348,7 +2402,7 @@ const Bundles = () => {
               </Text>
               {/* 6. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2359,7 +2413,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 mb='16px'
                 maxW='548px'>
@@ -2375,7 +2429,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='60px'
@@ -2387,7 +2441,7 @@ const Bundles = () => {
               </Text>
               <Flex
                 flexDirection='column'
-                bg='#F4F7FE'
+                bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
                 ps='24px'
                 pe='23px'
                 pt='25px'
@@ -2396,7 +2450,7 @@ const Bundles = () => {
                 maxW='575px'
                 display={{ base: "none", xl: "flex" }}>
                 <Text
-                  color='brand.700'
+                  color='white'
                   fontSize='22px'
                   lineHeight='34px'
                   fontWeight='500'
@@ -2406,14 +2460,14 @@ const Bundles = () => {
                 <Text
                   fontSize='md'
                   lineHeight='28px'
-                  color='#878CBD'
+                  color='#C5C9EB'
                   fontWeight='400'
                   maxW='548px'>
                   Feel free to send us a message using the
                   <NavLink to='/contact'>
                     <Text
                       textDecoration='underline'
-                      color='brand.300'
+                      color='#F6AB3E'
                       fontWeight='500'
                       as='span'
                       mx='3px'>
@@ -2432,7 +2486,7 @@ const Bundles = () => {
               mx={{ base: "auto", xl: "0px" }}>
               {/* 7. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2442,7 +2496,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='16px'
@@ -2453,7 +2507,7 @@ const Bundles = () => {
                 domains:
               </Text>
               <UnorderedList ps='10px'>
-                <ListItem color='#878CBD'>
+                <ListItem color='#C5C9EB'>
                   <Text
                     fontSize='md'
                     lineHeight='28px'
@@ -2467,7 +2521,7 @@ const Bundles = () => {
                     "dev.yoursite.com", you can use the Freelancer License.
                   </Text>
                 </ListItem>
-                <ListItem color='#878CBD'>
+                <ListItem color='#C5C9EB'>
                   <Text
                     fontSize='md'
                     lineHeight='28px'
@@ -2484,7 +2538,7 @@ const Bundles = () => {
               </UnorderedList>
               {/* 8. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2494,7 +2548,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='16px'
@@ -2508,7 +2562,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 mb='16px'
                 maxW='608px'
@@ -2520,7 +2574,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='72px'
@@ -2531,7 +2585,7 @@ const Bundles = () => {
               </Text>
               {/* 9. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2542,13 +2596,13 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='72px'
                 maxW='548px'>
                 Yes, they are. Each theme has a
-                <Text color='brand.300' mx='3px' as='span'>
+                <Text color='#F6AB3E' mx='3px' as='span'>
                   html&css
                 </Text>{" "}
                 folder which contains the theme with classic HTML, CSS, and
@@ -2556,7 +2610,7 @@ const Bundles = () => {
               </Text>
               {/* 10. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2567,7 +2621,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='72px'
@@ -2577,7 +2631,7 @@ const Bundles = () => {
                 <NavLink to='/contact'>
                   <Text
                     textDecoration='underline'
-                    color='brand.300'
+                    color='#F6AB3E'
                     fontWeight='500'
                     as='span'
                     mx='3px'>
@@ -2590,7 +2644,7 @@ const Bundles = () => {
               </Text>
               {/* 11. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='34px'
                 fontWeight='500'
@@ -2600,7 +2654,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='16px'
@@ -2611,7 +2665,7 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 mb='72px'
@@ -2622,7 +2676,7 @@ const Bundles = () => {
               </Text>
               {/* 12. */}
               <Text
-                color='brand.700'
+                color='white'
                 fontSize='22px'
                 lineHeight='28px'
                 fontWeight='500'
@@ -2632,27 +2686,26 @@ const Bundles = () => {
               <Text
                 fontSize='md'
                 lineHeight='28px'
-                color='#878CBD'
+                color='#C5C9EB'
                 fontWeight='400'
                 letterSpacing='-0.5px'
                 maxW='548px'
                 mb={{ base: "72px", xl: "0px" }}>
                 You can remove the copyright notice (if it's a premium item),
                 but then you will need to create a separate
-                <Text color='brand.300' mx='3px' as='span'>
+                <Text color='#F6AB3E' mx='3px' as='span'>
                   .txt
                 </Text>{" "}
                 file called
-                <Text color='brand.300' mx='3px' as='span'>
+                <Text color='#F6AB3E' mx='3px' as='span'>
                   LICENSE.txt
                 </Text>
                 , and copy paste the copyright text in there. This file should
                 be added to the root folder of your project.
               </Text>
-
               <Flex
                 flexDirection='column'
-                bg='#F4F7FE'
+                bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
                 ps='24px'
                 pe='23px'
                 pt='25px'
@@ -2661,7 +2714,7 @@ const Bundles = () => {
                 maxW='575px'
                 display={{ base: "flex", xl: "none" }}>
                 <Text
-                  color='brand.700'
+                  color='white'
                   fontSize='22px'
                   lineHeight='28px'
                   fontWeight='500'
@@ -2671,14 +2724,14 @@ const Bundles = () => {
                 <Text
                   fontSize='md'
                   lineHeight='28px'
-                  color='#878CBD'
+                  color='#C5C9EB'
                   fontWeight='400'
                   maxW='548px'>
                   Feel free to send us a message using the
                   <NavLink to='/contact'>
                     <Text
                       textDecoration='underline'
-                      color='brand.300'
+                      color='#F6AB3E'
                       fontWeight='500'
                       as='span'
                       mx='3px'>
@@ -2694,7 +2747,8 @@ const Bundles = () => {
           </Flex>
         </Flex>
       </Flex>
-    </Layout>
+      <FooterBF />
+    </>
   );
 };
 

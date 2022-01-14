@@ -6,6 +6,7 @@ import { HSeparator } from "components/separator/Separator";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { featuredProducts } from "variables/products";
+import { Helmet } from "react-helmet";
 
 const Page404 = () => {
   const [products, setProducts] = useState([]);
@@ -16,12 +17,11 @@ const Page404 = () => {
     setProducts(filteredProducts);
   }, []);
 
-  useEffect(() => {
-    document.title = "404";
-  }, []);
-
   return (
     <Layout>
+      <Helmet>
+        <title itemprop="name">404</title>
+      </Helmet>
       <Flex
         direction='column'
         align='center'

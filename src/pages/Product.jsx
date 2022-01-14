@@ -34,6 +34,7 @@ import React, { useEffect, useState } from "react";
 import { BsPatchCheckFill } from "react-icons/bs";
 import { productData } from "variables/productData";
 import { featuredProducts } from "variables/products";
+import { Helmet } from "react-helmet";
 
 const Product = (props) => {
   const {
@@ -130,10 +131,12 @@ const Product = (props) => {
     buttonLinks,
   } = product;
 
-  document.title = `${title} - Premium and Stunning UI Kits, Templates and Themes for developers, designers & startups @ Simmmple`;
 
   return (
     <Layout>
+      <Helmet>
+        <title itemprop="name">{title} - by Simmmple</title>
+      </Helmet>
       <Flex
         bg='#fff'
         pb='225px'
@@ -674,8 +677,7 @@ const Product = (props) => {
                     _active={{ bg: "#1A05B7" }}
                     w='100%'
                     h='60px'
-                    mb='14px'
-                    _hover={{ bg: "#1A05B7" }}>
+                    mb='14px'>
                     <Text color='#fff' fontSize='sm'>
                       Download For Free
                     </Text>
@@ -737,9 +739,7 @@ const Product = (props) => {
                     h='60px'
                     _hover={{ bg: "#1A05B7" }}
                     _active={{ bg: "#1A05B7" }}
-                    w='100%'
-                    h='60px'
-                    _hover={{ bg: "#1A05B7" }}>
+                    >
                     <Text color='#fff' fontSize='sm'>
                       Buy it Now!
                     </Text>

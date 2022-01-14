@@ -9,13 +9,14 @@ import {
   Tabs,
   Tag,
   Text,
-  LightMode,
+
 } from "@chakra-ui/react";
 import simmmple3D from "assets/img/apps/simmmple-3d.png";
 import AppList from "components/apps/AppList";
 import Layout from "components/layout/Layout";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { apps } from "variables/apps";
+import { Helmet } from "react-helmet"
 
 const Apps = () => {
   const [tab, setTab] = useState({
@@ -25,13 +26,12 @@ const Apps = () => {
     extensions: false,
   });
 
-  useEffect(() => {
-    document.title =
-      "Apps - Premium and Stunning UI Kits, Templates and Themes for developers, designers & startups @ Simmmple";
-  }, []);
 
   return (
     <Layout>
+      <Helmet>
+        <title itemprop="name">Apps - Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
+      </Helmet>
       <Flex
         w={{ sm: "320px", md: "95%", xl: "1170px" }}
         mx='auto'

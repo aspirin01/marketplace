@@ -29,14 +29,12 @@ import {
 } from "components/icons/Icons";
 import Layout from "components/layout/Layout";
 import emailjs from "emailjs-com";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
-  useEffect(() => {
-    document.title =
-      "Contact - Premium and Stunning UI Kits, Templates and Themes for developers, designers & startups @ Simmmple";
-  }, []);
+
 
   const [tab, setTab] = useState({
     general: false,
@@ -97,52 +95,6 @@ const Contact = () => {
   const errorPartnerships = useRef();
   const errorOthers = useRef();
 
-  const handleGeneral = (e) => {
-    e.preventDefault();
-    if (general.name === "") {
-      e.target[0].style.border = "1px solid red";
-      errorGeneral.current.style.display = "flex";
-      e.target.children[0].children[1].lastChild.style.display = "block";
-      setTimeout(() => {
-        e.target[0].style.border = "1px solid rgb(226, 232, 240)";
-        errorGeneral.current.style.display = "none";
-        e.target.children[0].children[1].lastChild.style.display = "none";
-      }, 3000);
-    }
-    if (general.email === "") {
-      e.target[1].style.border = "1px solid red";
-      errorGeneral.current.style.display = "flex";
-      e.target.children[0].children[2].lastChild.style.display = "block";
-      setTimeout(() => {
-        e.target[1].style.border = "1px solid rgb(226, 232, 240)";
-        errorGeneral.current.style.display = "none";
-        e.target.children[0].children[2].lastChild.style.display = "none";
-      }, 3000);
-    }
-    if (general.message === "") {
-      e.target[2].style.border = "1px solid red";
-      errorGeneral.current.style.display = "flex";
-      e.target.children[0].children[3].lastChild.style.display = "block";
-      setTimeout(() => {
-        e.target[2].style.border = "1px solid rgb(226, 232, 240)";
-        errorGeneral.current.style.display = "none";
-        e.target.children[0].children[3].lastChild.style.display = "none";
-      }, 3000);
-    } else {
-      e.target[0].value = "";
-      e.target[1].value = "";
-      e.target[2].value = "";
-      setGeneral({
-        name: "",
-        email: "",
-        message: "",
-      });
-      setGeneralSubmission({
-        form: false,
-        submission: true,
-      });
-    }
-  };
 
   const sendEmailGeneral = (e) => {
     e.preventDefault();
@@ -413,6 +365,9 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title itemprop="name">Contact - Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
+      </Helmet>
       <Flex minH='1500px' pt='100px' pb='200px' w='100%' bg='#FAFCFE'>
         <Box
           position='absolute'
@@ -730,6 +685,7 @@ const Contact = () => {
                           </FormLabel>
                           <Textarea
                             border='1px solid #E0E5F2'
+                            color='gray.700'
                             borderColor='#E0E5F2 !important'
                             fontSize={{ sm: "sm", md: "md" }}
                             id='textarea'
@@ -942,6 +898,18 @@ const Contact = () => {
                                   product: e.target.value,
                                 })
                               }>
+                               <option value='Vision UI Dashboard PRO Chakra'>
+                                Vision UI Dashboard PRO Chakra
+                              </option>
+                              <option value='Vision UI Dashboard Free Chakra'>
+                                Vision UI Dashboard Free Chakra
+                              </option>
+                              <option value='Vision UI Dashboard PRO React'>
+                                Vision UI Dashboard PRO React
+                              </option>
+                              <option value='Vision UI Dashboard Free React'>
+                                Vision UI Dashboard Free React
+                              </option>
                               <option value='Purity UI Dashboard PRO'>
                                 Purity UI Dashboard PRO
                               </option>
@@ -997,6 +965,7 @@ const Contact = () => {
                           </FormLabel>
                           <Textarea
                             border='1px solid #E0E5F2'
+                            color='gray.700'
                             borderColor='#E0E5F2 !important'
                             fontSize={{ sm: "sm", md: "md" }}
                             id='textarea-support'
@@ -1242,7 +1211,7 @@ const Contact = () => {
                             borderColor='#E0E5F2 !important'
                             fontSize={{ sm: "sm", md: "md" }}
                             id='company-partnerships'
-                            placeholder='Enter your email address'
+                            placeholder='Enter your company / website'
                             borderRadius='30px'
                             _placeholder={{ color: "#878CBD" }}
                             p='26px 32px'
@@ -1265,6 +1234,7 @@ const Contact = () => {
                           </FormLabel>
                           <Textarea
                             border='1px solid #E0E5F2'
+                            color='gray.700'
                             borderColor='#E0E5F2 !important'
                             fontSize={{ sm: "sm", md: "md" }}
                             id='textarea-partnerships'
@@ -1450,6 +1420,7 @@ const Contact = () => {
                           </FormLabel>
                           <Textarea
                             border='1px solid #E0E5F2'
+                            color='gray.700'
                             borderColor='#E0E5F2 !important'
                             fontSize={{ sm: "sm", md: "md" }}
                             id='textarea'

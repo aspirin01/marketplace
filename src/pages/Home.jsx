@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import {
   Flex,
@@ -27,9 +27,6 @@ import {
   LeftButtonEffect,
   RightButtonEffect,
   SimmmpleLogoBundle,
-  ArticleIcon1,
-  ArticleIcon2,
-  ArticleIcon3,
   SearchIcon,
 } from "components/icons/Icons";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -37,7 +34,8 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 // Images
 import homeBg from "assets/img/homepage/home-background.png";
 import onHomeBg from "assets/img/homepage/on-home-background.png";
-import bundleBg from "assets/img/homepage/bundle-background.png";
+// import bundleBg from "assets/img/homepage/bundle-background.png";
+import bundleBg from "assets/img/bundles/bf-background.png";
 import googleLogo from "assets/img/homepage/google.png";
 import msnLogo from "assets/img/homepage/msn.png";
 import microsoftLogo from "assets/img/homepage/microsoft.png";
@@ -48,8 +46,12 @@ import figmaLogo from "assets/img/homepage/figma2.png";
 import vscodeLogo from "assets/img/homepage/vscode2.png";
 import mailLogo from "assets/img/homepage/mail2.png";
 import simmmpleButtonLogo from "assets/img/homepage/simmmple-button.png";
+import articleImage1 from "assets/img/homepage/Article-1.png";
+import articleImage2 from "assets/img/homepage/Article-2.png";
+import articleImage3 from "assets/img/homepage/Article-3.png";
 
 import Layout from "components/layout/Layout";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const leftEffect = useRef();
@@ -68,13 +70,11 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    document.title =
-      "Premium and Stunning UI Kits, Templates and Themes for developers, designers & startups @ Simmmple";
-  }, []);
-
   return (
     <Layout>
+      <Helmet>
+        <title itemprop='name'>Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
+      </Helmet>
       <Flex direction='column' bg='#fff' maxW='100%' overflowX='hidden'>
         {/* Hero */}
         <Flex
@@ -104,7 +104,7 @@ const Home = () => {
                 fontWeight='bold'
                 mb='16px'
                 letterSpacing='2px'>
-                BUILD BETTER, BUILD FASTER
+                BUILDING BETTER, BUILDING FASTER
               </Text>
               <Text
                 fontSize={{ base: "27px", "2sm": "29px", md: "44px" }}
@@ -421,17 +421,19 @@ const Home = () => {
               </NavLink>
             </Flex>
             <ProductList products={featuredProducts} />
-            <Button
-              bg='#fff'
-              w='190px'
-              h='56px'
-              display={{ base: "flex", md: "none" }}
-              mt='50px'
-              mx='auto'>
-              <Text color='brand.300' fontWeight='500' fontSize='sm'>
-                Explore all Products
-              </Text>
-            </Button>
+            <NavLink to='/templates/all-templates'>
+              <Button
+                bg='#fff'
+                w='190px'
+                h='56px'
+                display={{ base: "flex", md: "none" }}
+                mt='50px'
+                mx='auto'>
+                <Text color='brand.300' fontWeight='500' fontSize='sm'>
+                  Explore all Products
+                </Text>
+              </Button>
+            </NavLink>
           </Flex>
         </Flex>
 
@@ -458,12 +460,12 @@ const Home = () => {
               mb='48px'
             />
             <Text
-              fontSize={{ base: "48px", md: "64px" }}
+              fontSize={{ base: "34px", md: "64px" }}
               lineHeight={{ base: "58px", md: "72px" }}
               color='#fff'
               fontWeight='bold'
               mb='25px'>
-              Exclusive Digital Bundle
+              Winter Promotion 80%
             </Text>
             <Text
               color='#fff'
@@ -472,13 +474,13 @@ const Home = () => {
               maxW={{ md: "70%" }}
               mb='50px'>
               <Text as='span' fontWeight='bold'>
-                Save up to 80% OFF{" "}
+                Save 80% OFF now{" "}
               </Text>
-              to all Premium Coded & Design Products & Tools with our Exclusive
-              Digital Bundle!
+              to all Premium Coded & Design Products & Tools with
+              the Exclusive Winter Promotion Digital Bundle!
             </Text>
             <Box>
-              <Countdown date='17 December 2021' />
+              <Countdown date='20 January 2022' />
             </Box>
             <Flex align='center' mt='54px'>
               <LeftButtonEffect
@@ -488,9 +490,10 @@ const Home = () => {
                 h='115px'
                 transition='all .5s ease'
               />
-              <NavLink to='/bundles'>
+              {/* <NavLink to='/bundles'> */}
+              <NavLink to='/bundle'>
                 <Button
-                  bg='white'
+                  bg='linear-gradient(108.54deg, #FF416C 6.56%, #FF4B2B 95.2%)'
                   variant='solid'
                   w='190px'
                   h='56px'
@@ -502,8 +505,8 @@ const Home = () => {
                     leftEffect.current.style.transform = "translateX(5px)";
                     rightEffect.current.style.transform = "translateX(-5px)";
                   }}>
-                  <Text color='brand.700' fontSize='sm'>
-                    Save up to 80% now
+                  <Text color='white' fontSize='sm'>
+                    Save 80% now!
                   </Text>
                 </Button>
               </NavLink>
@@ -559,18 +562,19 @@ const Home = () => {
               </NavLink>
             </Flex>
             <ProductList products={latestProducts} />
-
-            <Button
-              bg='#fff'
-              w='190px'
-              h='56px'
-              display={{ base: "flex", md: "none" }}
-              mx='auto'
-              mt='40px'>
-              <Text color='brand.300' fontWeight='500' fontSize='sm'>
-                Explore all Products
-              </Text>
-            </Button>
+            <NavLink to='/templates/all-templates'>
+              <Button
+                bg='#fff'
+                w='190px'
+                h='56px'
+                display={{ base: "flex", md: "none" }}
+                mx='auto'
+                mt='40px'>
+                <Text color='brand.300' fontWeight='500' fontSize='sm'>
+                  Explore all Products
+                </Text>
+              </Button>
+            </NavLink>
           </Flex>
         </Flex>
 
@@ -618,7 +622,7 @@ const Home = () => {
             <Grid
               templateColumns={{ md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
               gap='22px'>
-              <Link href='https://blog.simmmple.com'>
+              <Link href='https://blog.simmmple.com/how-to-create-modern-dashboards-in-a-few-minutes-directly-in-figma/?ref=simmmple'>
                 <Card
                   boxShadow='45px 76px 113px 7px rgba(112, 144, 176, 0.08)'
                   pb='35px'>
@@ -628,12 +632,12 @@ const Home = () => {
                         align='center'
                         mb='30px'
                         justify='center'
-                        bg='linear-gradient(135deg, #868CFF 0%, #4318FF 100%)'
-                        borderRadius='24px'
                         w='100%'
-                        h='230px'>
-                        <ArticleIcon1 w='87' h='105' color='#fff' />
-                      </Flex>
+                        h='230px'
+                        borderRadius='24px'
+                        bgImage={articleImage1}
+                        bgSize='cover'
+                        bgPosition='center'></Flex>
                       <Tag
                         color='brand.300'
                         bg='#ECE9FF'
@@ -648,18 +652,18 @@ const Home = () => {
                         fontSize='lg'
                         fontWeight='500'
                         mb='14px'>
-                        How to build a design system if you're the only designer
-                        in a startup
+                        How to create Modern Dashboards in a few minutes
+                        directly in Figma
                       </Text>
                       <Text fontSize='sm' color='#878CBD' fontWeight='normal'>
-                        It's always hard to be the only person in a company who
-                        is responsible for product design. Your day...
+                        The anatomy of a great dashboard is based both on a
+                        great User Interface & User Experience. We want..
                       </Text>
                     </Flex>
                   </CardBody>
                 </Card>
               </Link>
-              <Link href='https://blog.simmmple.com'>
+              <Link href='https://uxdesign.cc/how-to-build-a-design-system-if-youre-the-only-designer-in-a-startup-f4695d2f4b7f?ref=simmmple'>
                 <Card
                   boxShadow='45px 76px 113px 7px rgba(112, 144, 176, 0.08)'
                   pb='35px'>
@@ -667,23 +671,14 @@ const Home = () => {
                     <Flex direction='column'>
                       <Flex
                         align='center'
-                        direction='column'
                         mb='30px'
                         justify='center'
-                        bg='linear-gradient(109.6deg, #FF9966 17.44%, #FF5E62 78.63%)'
-                        borderRadius='24px'
                         w='100%'
-                        h='230px'>
-                        <ArticleIcon2
-                          w='72px'
-                          h='72px'
-                          color='#fff'
-                          mb='20px'
-                        />
-                        <Text color='#fff' fontSize='xl' fontWeight='bold'>
-                          SEO Strategy
-                        </Text>
-                      </Flex>
+                        h='230px'
+                        borderRadius='24px'
+                        bgImage={articleImage2}
+                        bgSize='cover'
+                        bgPosition='center'></Flex>
                       <Tag
                         color='brand.300'
                         bg='#ECE9FF'
@@ -720,12 +715,12 @@ const Home = () => {
                         align='center'
                         mb='30px'
                         justify='center'
-                        bg='linear-gradient(90deg, #4481EB 0%, #04BEFE 100%)'
-                        borderRadius='24px'
                         w='100%'
-                        h='230px'>
-                        <ArticleIcon3 w='87' h='105' color='#fff' />
-                      </Flex>
+                        h='230px'
+                        borderRadius='24px'
+                        bgImage={articleImage3}
+                        bgSize='cover'
+                        bgPosition='center'></Flex>
                       <Tag
                         color='brand.300'
                         bg='#ECE9FF'

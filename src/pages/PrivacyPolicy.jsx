@@ -10,17 +10,18 @@ import {
 import Layout from "components/layout/Layout";
 // Custom Components
 import { HSeparator } from "components/separator/Separator";
-import React, { useEffect } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const PrivacyPolicy = () => {
-  useEffect(() => {
-    document.title =
-      "Privacy - Premium and Stunning UI Kits, Templates and Themes for developers, designers & startups @ Simmmple";
-  }, []);
+
 
   return (
     <Layout>
+      <Helmet>
+        <title itemprop="name">Privacy Policy - Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
+      </Helmet>
       <Flex
         direction='column'
         bg='white'
