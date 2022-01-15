@@ -15,7 +15,6 @@ const TermsConditions = () => {
       </Helmet>
       <Flex
         direction='column'
-        bg='white'
         overflowX='hidden'
         mb='100px'
         maxW='100%'>

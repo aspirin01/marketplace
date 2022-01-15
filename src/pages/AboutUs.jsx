@@ -34,7 +34,7 @@ const Bundles = () => {
       </Helmet>
       <Flex
         direction='column'
-        bg='#fff'
+        bg='#14182C'
         overflowX='hidden'
         pt={{ base: "50px", xl: "120px" }}
         maxW='100%'
@@ -48,7 +48,7 @@ const Bundles = () => {
           position='relative'
           maxW='100%'>
           <Flex
-            bg='#F6F8FD'
+            bg='#232b4f'
             h={{ base: "1350px", md: "1000px", lg: "1200px", xl: "1320px" }}
             w={{ base: "1350px", md: "1000px", lg: "1200px", xl: "1320px" }}
             max
@@ -72,7 +72,7 @@ const Bundles = () => {
             />
             <Text
               fontSize={{ base: "28px", md: "32px", lg: "46px", xl: "54px" }}
-              color='brand.700'
+              color='white'
               fontWeight='bold'
               mb={{ base: "40px", lg: "70px" }}
               w={{ xl: "1069px" }}
@@ -80,11 +80,11 @@ const Bundles = () => {
               letterSpacing='0px'
               lineHeight={{ base: "38px", md: "64px" }}>
               Our mission is to empower
-              <Text color='brand.300' as='span' mx='10px'>
+              <Text color='#F6AB3E' as='span' mx='10px'>
                 all developers <br /> & designers
               </Text>
               with the best UI tools and resources to
-              <Text color='brand.300' as='span' ms='10px'>
+              <Text color='#F6AB3E' as='span' ms='10px'>
                 build better & faster.
               </Text>
             </Text>
@@ -117,7 +117,7 @@ const Bundles = () => {
                 </Text>
                 <Text
                   fontSize={{ base: "32px", md: "36px", lg: "48px" }}
-                  color='brand.700'
+                  color='#a4a4a4'
                   fontWeight='700'>
                   2019
                 </Text>
@@ -131,7 +131,7 @@ const Bundles = () => {
                 </Text>
                 <Text
                   fontSize={{ base: "32px", md: "36px", lg: "48px" }}
-                  color='brand.700'
+                  color='#a4a4a4'
                   fontWeight='700'>
                   10,000+
                 </Text>
@@ -145,14 +145,14 @@ const Bundles = () => {
                 </Text>
                 <Text
                   fontSize={{ base: "32px", md: "36px", lg: "48px" }}
-                  color='brand.700'
+                  color='#a4a4a4'
                   fontWeight='700'>
                   2.6%
                 </Text>
               </Flex>
             </Flex>
             <Text
-              color='brand.300'
+              color='#F6AB3E'
               fontWeight='700'
               fontSize='sm'
               letterSpacing='2px'
@@ -160,7 +160,7 @@ const Bundles = () => {
               COMPANIES THAT USE OUR PRODUCTS
             </Text>
             <Text
-              color='brand.700'
+              color='#a4a4a4'
               fontWeight='700'
               pb={{ base: "0px", lg: "70px" }}
               fontSize={{ base: "30px", md: "42px" }}
@@ -174,7 +174,10 @@ const Bundles = () => {
           gap={{ base: "40px", lg: "0px" }}
           align='center'
           justify='center'
-          bg='#fff'
+          border='2px solid rgba(255, 255, 255, 0.11)'
+
+          bg='linear-gradient(117.45deg, rgba(20, 24, 44, 0.5) -3.91%, rgba(20, 24, 44, 0.5) 75.27%)'
+          backdropFilter='blur(42px)'
           borderRadius='30px'
           p={{ base: "45px 50px", lg: "45px 100px" }}
           boxShadow='0px 18px 40px rgba(112, 144, 176, 0.12)'
@@ -209,7 +212,7 @@ const Bundles = () => {
             mx='auto'>
             <Text
               fontSize='sm'
-              color='brand.300'
+              color='#F6AB3E'
               fontWeight='bold'
               mb='16px'
               letterSpacing='2px'
@@ -219,7 +222,7 @@ const Bundles = () => {
             <Text
               fontSize={{ base: "30px", md: "42px" }}
               lineHeight='44px'
-              color='brand.700'
+              color='#a4a4a4'
               mb='20px'
               mx='auto'
               textAlign='center'
@@ -255,7 +258,7 @@ const Bundles = () => {
                   <Text
                     mx='12px'
                     fontWeight='500'
-                    color='brand.700'
+                    color='#a4a4a4'
                     fontSize='lg'>
                     Andrei-Fredy Craciun
                   </Text>
@@ -288,7 +291,7 @@ const Bundles = () => {
                   <Text
                     mx='12px'
                     fontWeight='500'
-                    color='brand.700'
+                    color='#a4a4a4'
                     fontSize='lg'>
                     Vlad Mihalache
                   </Text>
@@ -323,7 +326,7 @@ const Bundles = () => {
                   <Text
                     mx='12px'
                     fontWeight='500'
-                    color='brand.700'
+                    color='#a4a4a4'
                     fontSize='lg'>
                     Theodor Dumitrache
                   </Text>
@@ -356,7 +359,7 @@ const Bundles = () => {
                   <Text
                     mx='12px'
                     fontWeight='500'
-                    color='brand.700'
+                    color='#a4a4a4'
                     fontSize='lg'>
                     Martin Stoleru
                   </Text>
@@ -382,7 +385,7 @@ const Bundles = () => {
             mx='auto'>
             <Text
               fontSize='sm'
-              color='brand.300'
+              color='#F6AB3E'
               fontWeight='bold'
               mb='16px'
               letterSpacing='2px'
@@ -392,7 +395,7 @@ const Bundles = () => {
             <Text
               fontSize={{ base: "30px", md: "42px" }}
               lineHeight='44px'
-              color='brand.700'
+              color='#a4a4a4'
               mb='20px'
               mx='auto'
               textAlign='center'

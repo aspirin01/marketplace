@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
       </Helmet>
       <Flex
         direction='column'
-        bg='white'
+
         maxW='100%'
         overflowX='hidden'
         mb='100px'>

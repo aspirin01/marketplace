@@ -368,7 +368,7 @@ const Contact = () => {
       <Helmet>
         <title itemprop="name">Contact - Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
       </Helmet>
-      <Flex minH='1500px' pt='100px' pb='200px' w='100%' bg='#FAFCFE'>
+      <Flex minH='1500px' pt='150px' pb='200px' w='100%' >
         <Box
           position='absolute'
           w='586px'
@@ -385,7 +385,7 @@ const Contact = () => {
           align='center'>
           <Flex direction='column' textAlign='center' align='center' mb='100px'>
             <Text
-              color='brand.300'
+              color='#f6ab3e'
               fontSize='sm'
               fontWeight='bold'
               mb='20px'
@@ -393,7 +393,7 @@ const Contact = () => {
               GET IN TOUCH
             </Text>
             <Text
-              color='brand.700'
+              color='#efefef'
               fontSize={{ sm: "42px", md: "56px" }}
               fontWeight='bold'
               mb='20px'>

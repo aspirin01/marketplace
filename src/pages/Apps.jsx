@@ -35,6 +35,7 @@ const Apps = () => {
       <Flex
         w={{ sm: "320px", md: "95%", xl: "1170px" }}
         mx='auto'
+        my='140px'
         minH='1000px'
         pt={{ sm: "60px", md: "90px" }}
         pb='200px'
@@ -45,11 +46,11 @@ const Apps = () => {
           mb='32px'>
           <Flex direction='column' maxW={{ sm: "100%", md: "55%", lg: "62%" }}>
             <Flex align='center' mb='24px'>
-              <Text color='brand.300' fontWeight='500' fontSize='sm' me='12px'>
+              <Text color='#F6AB3E' fontWeight='500' fontSize='sm' me='12px'>
                 APPS & PLUGINS
               </Text>
               <Tag
-                color='brand.300'
+                color='black'
                 bg='#ECE9FF'
                 borderRadius='30px'
                 p='7px 14px'
@@ -58,7 +59,7 @@ const Apps = () => {
               </Tag>
             </Flex>
             <Text
-              color='brand.700'
+              color='white'
               lineHeight={{ sm: "42px", lg: "62px" }}
               fontSize={{ sm: "34px", lg: "46px" }}
               letterSpacing='-1px'
@@ -110,12 +111,17 @@ const Apps = () => {
                 justify='center'
                 align='center'
                 borderRadius='70px'
-                bg={tab.apps ? "brand.300" : "#F6F8FD"}
+                bg={tab.apps ? "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" : "rgba(255, 255, 255, 0.04)"}
+
                 p={{ sm: "22px 32px", md: "22px 40px" }}
                 transition='all .25s ease'
-                _hover={{ bg: tab.apps ? null : "gray.100" }}>
+
+                >
                 <Text
-                  color={tab.apps ? "#fff" : "brand.300"}
+                     color={tab.apps ? "#fff" : "#9a9fcb"}
+                     _hover={
+                      {color:tab.apps ? "#fff" : "#fff"}
+                    }
                   fontSize={{ sm: "xs", md: "sm" }}
                   fontWeight='500'>
                   All Apps & Plugins
@@ -140,12 +146,15 @@ const Apps = () => {
                 justify='center'
                 align='center'
                 borderRadius='70px'
-                bg={tab.featured ? "brand.300" : "#F6F8FD"}
+                bg={tab.featured ? "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" : "rgba(255, 255, 255, 0.04)"}
+
                 p={{ sm: "22px 32px", md: "22px 40px" }}
-                transition='all .25s ease'
-                _hover={{ bg: tab.featured ? null : "gray.100" }}>
+                transition='all .25s ease'>
                 <Text
-                  color={tab.featured ? "#fff" : "brand.300"}
+                  color={tab.featured ? "#fff" : "#9a9fcb"}
+                  _hover={
+                    {color:tab.featured ? "#fff" : "#fff"}
+                  }
                   fontSize={{ sm: "xs", md: "sm" }}
                   fontWeight='500'>
                   Featured
@@ -170,12 +179,14 @@ const Apps = () => {
                 justify='center'
                 align='center'
                 borderRadius='70px'
-                bg={tab.memberships ? "brand.300" : "#F6F8FD"}
+                bg={tab.memberships ? "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" : "rgba(255, 255, 255, 0.04)"}
                 p={{ sm: "22px 32px", md: "22px 40px" }}
-                transition='all .25s ease'
-                _hover={{ bg: tab.memberships ? null : "gray.100" }}>
+                transition='all .25s ease'>
                 <Text
-                  color={tab.memberships ? "#fff" : "brand.300"}
+                  color={tab.memberships ? "#fff" : "#9a9fcb"}
+                  _hover={
+                    {color:tab.memberships ? "#fff" : "#fff"}
+                  }
                   fontSize={{ sm: "xs", md: "sm" }}
                   fontWeight='500'>
                   Memberships
@@ -200,12 +211,15 @@ const Apps = () => {
                 justify='center'
                 align='center'
                 borderRadius='70px'
-                bg={tab.extensions ? "brand.300" : "#F6F8FD"}
+                bg={tab.extensions ? "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" : "rgba(255, 255, 255, 0.04)"}
                 p={{ sm: "22px 32px", md: "22px 40px" }}
-                transition='all .25s ease'
-                _hover={{ bg: tab.extensions ? null : "gray.100" }}>
+                transition='all .25s ease'>
                 <Text
-                  color={tab.extensions ? "#fff" : "brand.300"}
+                  color={tab.extensions ? "#fff" : "#9a9fcb"}
+                  _hover={
+                {color:tab.extensions ? "#fff" : "#fff"}
+
+                  }
                   fontSize={{ sm: "xs", md: "sm" }}
                   fontWeight='500'>
                   Extensions

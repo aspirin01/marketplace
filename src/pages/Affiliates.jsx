@@ -16,8 +16,6 @@ const Affiliates = () => {
       </Helmet>
       <Flex
         direction='column'
-        bg='white'
-        boxShadow='75px 85px 113px 0px #7090B014'
         overflowX='hidden'
         mb='100px'
         maxW='100%'>

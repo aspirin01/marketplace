@@ -5,9 +5,12 @@ import { HSeparator } from "components/separator/Separator";
 
 const AppItem = ({ image, name, category, description, link }) => {
   return (
-    <Card>
+    <Card
+    bg='linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)'
+    >
       <Flex direction='column' h='100%'>
-        <Flex align='center'>
+        <Flex align='center'
+        >
           <Image
             src={image}
             w='90px'
@@ -17,7 +20,7 @@ const AppItem = ({ image, name, category, description, link }) => {
             borderRadius='100px'
           />
           <Flex direction='column'>
-            <Text color='brand.700' fontWeight='500' fontSize='26px' mb='4px'>
+            <Text color='white' fontWeight='500' fontSize='26px' mb='4px'>
               {name}
             </Text>
             <Text color='#878CBD' fontWeight='normal' fontSize='16px'>
@@ -25,11 +28,19 @@ const AppItem = ({ image, name, category, description, link }) => {
             </Text>
           </Flex>
         </Flex>
-        <HSeparator my='28px' />
+        <HSeparator my='28px'  />
         {description}
         <Link href={link} target="_blank">
-          <Button bg='#F6F8FD' h='56px' border='1px solid #E9EDF7' mt='auto' w="100%">
-            <Text fontSize='sm' color='#68769F'>
+          <Button bg='transparent' h='56px' border='1px solid white' mt='auto' w="100%"
+          _hover={{
+            bg: "none",
+            opacity: "0.8",
+          }}
+          _active={{
+            bg: "none",
+            opacity: "0.8",
+          }}>
+            <Text fontSize='sm' color='white'>
               Learn More
             </Text>
           </Button>

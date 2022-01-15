@@ -139,7 +139,7 @@ const Templates = (props) => {
       });
       setActiveTitle("Bootstrap Products");
     }
-  }, []);
+  }, [window.location.href]);
 
   const sort = (type) => {
     const templateName = props.match.params.templateName;
@@ -191,7 +191,7 @@ const Templates = (props) => {
       <Helmet>
         <title itemprop="name">{activeTitle} - Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
       </Helmet>
-      <Flex direction='column' bg='#fff'>
+      <Flex direction='column' >
         <Flex
           bgImage={templatesBg}
           bgSize='cover'
@@ -206,7 +206,7 @@ const Templates = (props) => {
             justify='center'>
             <Text
               fontSize='xs'
-              color='#fff'
+              color='#F6ab3e'
               fontWeight='bold'
               mb='16px'
               letterSpacing='2px'>
@@ -241,19 +241,21 @@ const Templates = (props) => {
                 alignItems='center'>
                 <Flex
                   justify='space-between'
-                  bg='#fff'
+                  bg='transparent'
+                  border='1.6px solid #d4d4d4'
                   borderRadius='70px'
                   w={{ sm: "300px", lg: "470px" }}
                   h='70px'
                   p='22px 22px 22px 20px'
                   align='center'>
                   <Input
-                    ref={inputValue}
-                    placeholder='eg. Venus Design System'
-                    boxShadow='none'
-                    border='none'
-                    _focus={{ border: "none" }}
-                    _placeholder={{ color: "#878CBD" }}
+                   ref={inputValue}
+                   placeholder='eg. Venus Design System'
+                   boxShadow='none'
+                   color='#d4d4d4'
+                   border='none'
+                   _focus={{ border: "none" }}
+                   _placeholder={{ color: "#d4d4d4" }}
                   />
                   <Button
                     type='submit'
@@ -262,7 +264,7 @@ const Templates = (props) => {
                     _hover='none'
                     _active='none'
                     p='0px'>
-                    <SearchIcon w='18px' h='18px' color='#878CBD' />
+                    <SearchIcon w='18px' h='18px' color='#d4d4d4' />
                   </Button>
                 </Flex>
               </FormControl>
@@ -276,7 +278,10 @@ const Templates = (props) => {
           pb='200px'>
           <Flex
             align='center'
-            bg='#fff'
+            border='4px solid'
+            borderColor='#cb153f9e'
+            bg='linear-gradient(117.45deg, rgba(20, 24, 44, 0.5) -3.91%, rgba(20, 24, 44, 0.5) 75.27%)'
+            backdropFilter='blur(42px)'
             justify='center'
             w='100%'
             boxShadow='0px 18px 40px rgba(112, 144, 176, 0.12)'
@@ -304,9 +309,14 @@ const Templates = (props) => {
                   justify='center'
                   borderRadius='30px'
                   transition='all .25s ease'
-                  bg={activeTab.all ? "#02044A" : "#fff"}
-                  color={activeTab.all ? "#fff" : "#8F9BBA"}
-                  border={activeTab.all ? "none" : "1px solid #E0E5F2"}
+                  boxShadow='unset'
+                  fontWeight='500'
+                  w='100%'
+                  color='white'
+                  fontSize='sm'
+                  _hover={activeTab.all? "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" }
+                  _active={ activeTab.all?  "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
+                  bg={activeTab.all ? 'linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)' : "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
                   onClick={() => {
                     setActiveTab({
                       all: true,
@@ -334,9 +344,10 @@ const Templates = (props) => {
                   justify='center'
                   borderRadius='30px'
                   transition='all .25s ease'
-                  bg={activeTab.admin ? "#02044A" : "#fff"}
-                  color={activeTab.admin ? "#fff" : "#8F9BBA"}
-                  border={activeTab.admin ? "none" : "1px solid #E0E5F2"}
+                  color='white'
+                  _hover={activeTab.admin? "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" }
+                  _active={ activeTab.admin?  "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
+                  bg={activeTab.admin ? 'linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)' : "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
                   onClick={() => {
                     setActiveTab({
                       all: false,
@@ -364,9 +375,10 @@ const Templates = (props) => {
                   justify='center'
                   borderRadius='30px'
                   transition='all .25s ease'
-                  bg={activeTab.ui ? "#02044A" : "#fff"}
-                  color={activeTab.ui ? "#fff" : "#8F9BBA"}
-                  border={activeTab.ui ? "none" : "1px solid #E0E5F2"}
+                  color='white'
+                  _hover={activeTab.ui? "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" }
+                  _active={ activeTab.ui?  "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
+                  bg={activeTab.ui ? 'linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)' : "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
                   onClick={() => {
                     setActiveTab({
                       all: false,
@@ -394,9 +406,10 @@ const Templates = (props) => {
                   justify='center'
                   borderRadius='30px'
                   transition='all .25s ease'
-                  bg={activeTab.free ? "#02044A" : "#fff"}
-                  color={activeTab.free ? "#fff" : "#8F9BBA"}
-                  border={activeTab.free ? "none" : "1px solid #E0E5F2"}
+                 color='white'
+                  _hover={activeTab.free? "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" }
+                  _active={ activeTab.free?  "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
+                  bg={activeTab.free ? 'linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)' : "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
                   onClick={() => {
                     setActiveTab({
                       all: false,
@@ -423,9 +436,10 @@ const Templates = (props) => {
                   justify='center'
                   borderRadius='30px'
                   transition='all .25s ease'
-                  bg={activeTab.premium ? "#02044A" : "#fff"}
-                  color={activeTab.premium ? "#fff" : "#8F9BBA"}
-                  border={activeTab.premium ? "none" : "1px solid #E0E5F2"}
+                  color='white'
+                  _hover={activeTab.premium? "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" }
+                  _active={ activeTab.premium?  "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
+                  bg={activeTab.premium ? 'linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)' : "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
                   onClick={() => {
                     setActiveTab({
                       all: false,
@@ -452,9 +466,10 @@ const Templates = (props) => {
                   justify='center'
                   borderRadius='30px'
                   transition='all .25s ease'
-                  bg={activeTab.figma ? "#02044A" : "#fff"}
-                  color={activeTab.figma ? "#fff" : "#8F9BBA"}
-                  border={activeTab.figma ? "none" : "1px solid #E0E5F2"}
+                  color='white'
+                  _hover={activeTab.figma? "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" }
+                  _active={ activeTab.figma?  "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
+                  bg={activeTab.figma ? 'linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)' : "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
                   onClick={() => {
                     setActiveTab({
                       all: false,
@@ -481,9 +496,10 @@ const Templates = (props) => {
                   justify='center'
                   borderRadius='30px'
                   transition='all .25s ease'
-                  bg={activeTab.react ? "#02044A" : "#fff"}
-                  color={activeTab.react ? "#fff" : "#8F9BBA"}
-                  border={activeTab.react ? "none" : "1px solid #E0E5F2"}
+                  color='white'
+                  _hover={activeTab.react? "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" }
+                  _active={ activeTab.react?  "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
+                  bg={activeTab.react ? 'linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)' : "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
                   onClick={() => {
                     setActiveTab({
                       all: false,
@@ -510,9 +526,10 @@ const Templates = (props) => {
                   justify='center'
                   borderRadius='30px'
                   transition='all .25s ease'
-                  bg={activeTab.bootstrap ? "#02044A" : "#fff"}
-                  color={activeTab.bootstrap ? "#fff" : "#8F9BBA"}
-                  border={activeTab.bootstrap ? "none" : "1px solid #E0E5F2"}
+                  color='white'
+                  _hover={activeTab.bootstrap? "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)" }
+                  _active={ activeTab.bootstrap?  "linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)" :"linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
+                  bg={activeTab.bootstrap ? 'linear-gradient(108.54deg, #cb153fdd 6.56%, #ff4b2bcb 95.2%)' : "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"}
                   onClick={() => {
                     setActiveTab({
                       all: false,
@@ -541,7 +558,7 @@ const Templates = (props) => {
             px={{ md: "18px" }}>
             <Flex direction='column' align={{ sm: "center", md: "start" }}>
               <Text
-                color='brand.300'
+                color='#F6AB3E'
                 fontSize='xs'
                 mb='16px'
                 fontWeight='500'
@@ -550,7 +567,7 @@ const Templates = (props) => {
               </Text>
               <Text
                 fontSize={{ sm: "24px", md: "34px" }}
-                color='brand.700'
+                color='white'
                 fontWeight='500'>
                 {activeTitle}
               </Text>
@@ -560,11 +577,10 @@ const Templates = (props) => {
               h='54px'
               alignSelf={{ sm: "center", lg: "flex-end" }}
               mt={{ sm: "32px", lg: "0px" }}
-              color='brand.300'
-              border='1px solid #E0E5F2'
-              borderColor='#E0E5F2'
+              color='#d4d4d4'
+              border='1px solid #d4d4d4'
               _focus={{ boxShadow: "none" }}
-              iconColor='gray.700'
+              iconColor='gray.300'
               borderRadius='30px'
               display='flex'
               fontWeight='500'

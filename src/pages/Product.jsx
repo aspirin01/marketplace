@@ -135,10 +135,10 @@ const Product = (props) => {
   return (
     <Layout>
       <Helmet>
-        <title itemprop="name">{title} - by Simmmple</title>
+        <title itemprop="name">{title}</title>
       </Helmet>
       <Flex
-        bg='#fff'
+        bg='#14182C'
         pb='225px'
         pt={{ sm: "45px", lg: "90px" }}
         direction='column'>
@@ -162,7 +162,7 @@ const Product = (props) => {
               {tag}
             </Tag>
             <Text
-              color='brand.700'
+              color='white'
               fontSize={{ sm: "36px", lg: "56px" }}
               fontWeight='bold'
               mb='40px'
@@ -854,7 +854,7 @@ const Product = (props) => {
         <Divider h='1px' bg='rgba(135, 140, 189, 0.2)' my='80px' />
         <Flex direction='column' maxW='1170px' mx='auto' textAlign='center'>
           <Text
-            color='brand.300'
+            color='#F6AB3E'
             fontSize='xs'
             fontWeight='bold'
             mb='16px'
@@ -862,7 +862,7 @@ const Product = (props) => {
             RELATED PRODUCTS
           </Text>
           <Text
-            color='brand.700'
+            color='white'
             fontSize={{ sm: "32px", md: "40px" }}
             fontWeight='500'
             mb='54px'>

@@ -1,11 +1,11 @@
 import { Divider, Flex, Grid, Icon, Link, Stack, Text } from "@chakra-ui/react";
 // Images
-import footerBg from "assets/img/footer/footer-background-bf.png";
+import footerBg from "assets/img/footer/footer-background.png";
 // Custom Components
 import IconBox from "components/icons/IconBox";
 // Icons
 import { SimmmpleLogoWhite } from "components/icons/Icons";
-import MailchimpNewsletter from "components/mailchimp/MCFormBF";
+import MailchimpNewsletter from "components/mailchimp/MCForm";
 import React from "react";
 import {
   AiFillGithub,

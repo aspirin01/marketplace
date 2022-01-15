@@ -24,11 +24,13 @@ const Page404 = () => {
       </Helmet>
       <Flex
         direction='column'
+        bg='#2b314f'
         align='center'
         justify='center'
         pt={{ sm: "75px", lg: "170px" }}
         pb='155px'
         textAlign='center'>
+
         <Image
           src={img404}
           w={{ sm: "300px", lg: "400px" }}
@@ -36,7 +38,7 @@ const Page404 = () => {
           mb='35px'
         />
         <Text
-          color='brand.700'
+          color='white'
           fontWeight='bold'
           fontSize={{ sm: "34px", lg: "46px" }}
           mb='24px'>
@@ -45,15 +47,16 @@ const Page404 = () => {
         <Text fontSize='lg' color='#878CBD'>
           Maybe it’s best you start back at our home page..{" "}
           <NavLink to='/'>
-            <Text as='span' fontWeight='500' color='brand.300'>
+            <Text as='span' fontWeight='500' color='#F6AB3E'>
               Return at home here.
             </Text>
           </NavLink>{" "}
         </Text>
+
         <HSeparator mt={{ sm: "100px", lg: "195px" }} mb='75px' />
         <Flex maxW='1170px' mx='auto' direction='column' textAlign='center'>
           <Text
-            color='brand.300'
+            color='#F6AB3E'
             fontSize='xs'
             fontWeight='500'
             letterSpacing='2px'>
@@ -61,7 +64,7 @@ const Page404 = () => {
           </Text>
           <Text
             fontSize={{ sm: "34px", lg: "40px" }}
-            color='brand.700'
+            color='white'
             fontWeight='bold'
             letterSpacing='-1px'
             mb='55px'>

@@ -6,7 +6,7 @@ import React from "react";
 
 const Layout = (props) => {
   return (
-    <Box overflowX='hidden' maxW='100%'>
+    <Box overflowX='hidden' maxW='100%' bg='#14182C'>
       <Navbar />
       {props.children}
       <Footer />

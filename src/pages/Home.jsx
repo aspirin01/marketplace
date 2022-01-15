@@ -438,9 +438,7 @@ const Home = () => {
                         lineHeight='14px'
                         h='56px'
                         w='190px'>
-
                     Explore all Products
-
                 </Button>
               </NavLink>
             </Flex>
@@ -563,7 +561,7 @@ const Home = () => {
               <Flex direction='column'>
                 <Text
                   fontSize='xs'
-                  color='#C5C9EB'
+                  color='#F6AB3E'
                   fontWeight='bold'
                   mb='16px'
                   letterSpacing='2px'>
@@ -579,35 +577,50 @@ const Home = () => {
                 </Text>
               </Flex>
               <NavLink to='/templates/all-templates'>
-                <Button
-                  bg='#fff'
-                  w='190px'
-                  h='56px'
-                  _hover={{
-                    bg: "#ECE9FF",
-                  }}
-                  _active={{
-                    bg: "#ECE9FF",
-                  }}
-                  display={{ base: "none", md: "flex" }}>
-                  <Text color='#C5C9EB' fontWeight='500' fontSize='sm'>
+              <Button
+                        color='white'
+                        bg='none'
+                        border='1px solid white'
+                        _hover={{
+                          bg: "none",
+                          opacity: "0.8",
+                        }}
+                        _active={{
+                          bg: "none",
+                          opacity: "0.8",
+                        }}
+                        fontWeight='500'
+                        fontSize='sm'
+                        lineHeight='14px'
+                        h='56px'
+                        w='190px'>
                     Explore all Products
-                  </Text>
                 </Button>
               </NavLink>
             </Flex>
             <ProductList products={latestProducts} />
             <NavLink to='/templates/all-templates'>
-              <Button
-                bg='#fff'
-                w='190px'
-                h='56px'
+            <Button
+           color='white'
+           bg='none'
+           border='1px solid white'
+           _hover={{
+            bg: "none",
+            opacity: "0.8",
+          }}
+          _active={{
+            bg: "none",
+            opacity: "0.8",
+          }}
+          fontWeight='500'
+          fontSize='sm'
+          lineHeight='14px'
+          h='56px'
+          w='190px'
                 display={{ base: "flex", md: "none" }}
-                mx='auto'
-                mt='40px'>
-                <Text color='#C5C9EB' fontWeight='500' fontSize='sm'>
+                mt='50px'
+                mx='auto'>
                   Explore all Products
-                </Text>
               </Button>
             </NavLink>
           </Flex>
@@ -617,190 +630,9 @@ const Home = () => {
         <Flex direction='column' >
           <Flex
             direction='column'
-            w='1170px'
-            mx='auto'
-            pt='100px'
-            pb='225px'
-            maxW='100%'
-            px='20px'>
-            <Flex
-              direction='column'
-              align='center'
-              justify='center'
-              textAlign='center'
-              mb='72px'>
-              <Text
-                fontSize='xs'
-                color='#C5C9EB'
-                fontWeight='bold'
-                mb='16px'
-                letterSpacing='2px'>
-                TUTORIALS, ARTICLES & RESOURCES
-              </Text>
-              <Text
-                fontSize='34px'
-                color='white'
-                fontWeight='bold'
-                mb='20px'>
-                Discover resources & guides
-              </Text>
-              <Text
-                fontSize='md'
-                color='#878CBD'
-                fontWeight='normal'
-                maxW='500px'>
-                Discover resources, guides and articles that can help you build
-                unique solutions. Visit our learning centre for heaps of
-                content.
-              </Text>
-            </Flex>
-            <Grid
-              templateColumns={{ md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
-              gap='22px'>
-              <Link href='https://blog.simmmple.com/how-to-create-modern-dashboards-in-a-few-minutes-directly-in-figma/?ref=simmmple'>
-                <Card
-                  boxShadow='45px 76px 113px 7px rgba(112, 144, 176, 0.08)'
-                  pb='35px'>
-                  <CardBody>
-                    <Flex direction='column'>
-                      <Flex
-                        align='center'
-                        mb='30px'
-                        justify='center'
-                        w='100%'
-                        h='230px'
-                        borderRadius='24px'
-                        bgImage={articleImage1}
-                        bgSize='cover'
-                        bgPosition='center'></Flex>
-                      <Tag
-                        color='#C5C9EB'
-                        bg='#ECE9FF'
-                        borderRadius='30px'
-                        p='7px 14px'
-                        maxW='80px'
-                        mb='10px'>
-                        Articles
-                      </Tag>
-                      <Text
-                        color='white'
-                        fontSize='lg'
-                        fontWeight='500'
-                        mb='14px'>
-                        How to create Modern Dashboards in a few minutes
-                        directly in Figma
-                      </Text>
-                      <Text fontSize='sm' color='#878CBD' fontWeight='normal'>
-                        The anatomy of a great dashboard is based both on a
-                        great User Interface & User Experience. We want..
-                      </Text>
-                    </Flex>
-                  </CardBody>
-                </Card>
-              </Link>
-              <Link href='https://uxdesign.cc/how-to-build-a-design-system-if-youre-the-only-designer-in-a-startup-f4695d2f4b7f?ref=simmmple'>
-                <Card
-                  boxShadow='45px 76px 113px 7px rgba(112, 144, 176, 0.08)'
-                  pb='35px'>
-                  <CardBody>
-                    <Flex direction='column'>
-                      <Flex
-                        align='center'
-                        mb='30px'
-                        justify='center'
-                        w='100%'
-                        h='230px'
-                        borderRadius='24px'
-                        bgImage={articleImage2}
-                        bgSize='cover'
-                        bgPosition='center'></Flex>
-                      <Tag
-                        color='#C5C9EB'
-                        bg='#ECE9FF'
-                        borderRadius='30px'
-                        p='7px 14px'
-                        maxW='80px'
-                        mb='10px'>
-                        Articles
-                      </Tag>
-                      <Text
-                        color='white'
-                        fontSize='lg'
-                        fontWeight='500'
-                        mb='14px'>
-                        How to build a design system if you're the only designer
-                        in a startup
-                      </Text>
-                      <Text fontSize='sm' color='#878CBD' fontWeight='normal'>
-                        It's always hard to be the only person in a company who
-                        is responsible for product design. Your day...
-                      </Text>
-                    </Flex>
-                  </CardBody>
-                </Card>
-              </Link>
-              <Link href='https://blog.simmmple.com'>
-                <Card
-                  display={{ base: "none", lg: "flex" }}
-                  boxShadow='45px 76px 113px 7px rgba(112, 144, 176, 0.08)'
-                  pb='35px'>
-                  <CardBody>
-                    <Flex direction='column'>
-                      <Flex
-                        align='center'
-                        mb='30px'
-                        justify='center'
-                        w='100%'
-                        h='230px'
-                        borderRadius='24px'
-                        bgImage={articleImage3}
-                        bgSize='cover'
-                        bgPosition='center'></Flex>
-                      <Tag
-                        color='#C5C9EB'
-                        bg='#ECE9FF'
-                        borderRadius='30px'
-                        p='7px 14px'
-                        maxW='80px'
-                        mb='10px'>
-                        Articles
-                      </Tag>
-                      <Text
-                        color='white'
-                        fontSize='lg'
-                        fontWeight='500'
-                        mb='14px'>
-                        How to build a design system if you're the only designer
-                        in a startup
-                      </Text>
-                      <Text fontSize='sm' color='#878CBD' fontWeight='normal'>
-                        It's always hard to be the only person in a company who
-                        is responsible for product design. Your day...
-                      </Text>
-                    </Flex>
-                  </CardBody>
-                </Card>
-              </Link>
-            </Grid>
-            <Link href='https://blog.simmmple.com' mx='auto'>
-              <Button
-                bg='#ECE9FF'
-                w='152px'
-                h='56px'
-                alignSelf='center'
-                mt='52px'
-                _hover={{
-                  bg: "#ECE9FF",
-                }}
-                _active={{
-                  bg: "#ECE9FF",
-                }}>
-                <Text color='#C5C9EB' fontSize='sm'>
-                  Learn more
-                </Text>
-              </Button>
-            </Link>
-          </Flex>
+            pb='125px'
+            >
+         </Flex>
         </Flex>
       </Flex>
     </Layout>
