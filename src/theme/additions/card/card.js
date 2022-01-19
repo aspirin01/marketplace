@@ -10,7 +10,6 @@ const Card = {
       borderRadius: "30px",
       minWidth: "0px",
       wordWrap: "break-word",
-
       backgroundClip: "border-box",
     },
     variants: {
@@ -25,7 +24,6 @@ const Card = {
       variant: "panel",
     },
   };
-
   export const CardComponent = {
     components: {
       Card,
