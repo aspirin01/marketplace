@@ -13,7 +13,7 @@ const Licenses = () => {
       <Helmet>
         <title itemprop="name">Licenses - Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
       </Helmet>
-      <Flex direction='column' overflowX='hidden' mb='100px' bg='#14182C'>
+      <Flex direction='column' overflowX='hidden' mb='100px' bg='#02021E'>
         <Flex
           pb='100px'
           direction='column'

@@ -34,19 +34,22 @@ import IconBox from "components/icons/IconBox";
 import {
   contactSupport,
   SimmmpleLogoBundle,
-  SimmmpleLogoColored,
-  SimmmpleLogoColoredMobile,
   SimmmpleLogoWhite,
   SimmmpleLogoWhiteMobile,
 } from "components/icons/Icons";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { FiMenu } from "react-icons/fi";
 import { GoChevronDown } from "react-icons/go";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import routes from "routes";
-
+import {
+  LeftButtonEffect,
+  RightButtonEffect,
+} from "../icons/Icons";
 function Navbar() {
+  const leftEffect = useRef();
+  const rightEffect = useRef();
   const {
     isOpen: isOpenExplore,
     onOpen: onOpenExplore,
@@ -113,18 +116,23 @@ function Navbar() {
         position={scrolled ? "fixed" : "absolute"}
         top={scrolled ? "0px" : { base: "00px", md: "0px" }}
         zIndex='100'
-        bg={
-          secondary || scrolled
-            ? "linear-gradient(177.68deg, #242A4A 1.95%, #0E101E 118.65%)"
-            : "transparent"
-        }
+        background-attachment= "fixed"
+    background= "rgba(255,255,255,0.05)"
+    box-shadow= "20px 20px 50px rgba(0,0,0, 0.5)"
+    padding= "1rem 2.4rem"
+    backdrop-filter= "blur(15px)"
+    border-top-left-radius= "40px"
+    border-top-right-radius= "40px"
+    border-bottom-left-radius= "40px"
+    border-bottom-right-radius= "40px"
+
         boxShadow={"null"}
         transition='background-color 0.3s linear'>
         <Flex
           w={{ sm: "100%", lg: "970px", xl: "1170px" }}
           mx={{ sm: "20px", md: "24px", lg: "auto" }}
           align='center'
-          py='40px'
+          py='20px'
           position='relative'>
           <Flex
             mt={{ md: "0px" }}
@@ -629,31 +637,20 @@ function Navbar() {
               </Menu>
             </Flex>
           </Stack>
-          <Flex align='center' justify='flex-end'>
+          <Flex align='center' justify='flex-end' >
             <NavLink to='/templates/all-templates'>
-              <Button
-                w={{ sm: "114px", lg: "160px" }}
+              <Link href='#pricing'>
+                <Button
+                  bg='white'
+                  variant='solid'
+                  w={{ sm: "114px", lg: "160px" }}
                 h={{ sm: "48px", lg: "56px" }}
-                bg={secondary || scrolled ? "#ECE9FF" : "transparent"}
-                border={secondary || scrolled ? "none" : "1px solid #fff"}
-                _hover={{
-                  bg: secondary || scrolled ? null : "#4B63CD",
-                  color: "#fff",
-                }}
-                _active={{
-                  bg: secondary || scrolled ? null : "#4B63CD",
-                  color: "#fff",
-                }}
-                me={{ sm: "14px", lg: "0px" }}>
-                <Text
-                  transition='color 0.3s linear'
-                  fontSize='sm'
-                  fontWeight='500'
-                  color={secondary || scrolled ? "brand.300" : "#fff"}
-                  lineHeight='13px'>
-                  Get Started
-                </Text>
-              </Button>
+                 >
+                  <Text transition='color 0.3s linear' color='brand.700' fontSize='sm'>
+                    Save 80% now
+                  </Text>
+                </Button>
+              </Link>
             </NavLink>
             <IconBox
               bg='#f7f5ff'

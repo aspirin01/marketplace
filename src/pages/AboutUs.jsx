@@ -34,7 +34,7 @@ const Bundles = () => {
       </Helmet>
       <Flex
         direction='column'
-        bg='#14182C'
+        bg='#02021E'
         overflowX='hidden'
         pt={{ base: "50px", xl: "120px" }}
         maxW='100%'

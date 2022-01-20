@@ -106,7 +106,7 @@ const Bundles = () => {
           Winter Promotion 2021 - Free and Premium Stunning UI Kits, Templates, Design Tools and Themes ready-to-use in HTML, CSS, JS, React, Bootstrap, NextJS, Figma & Sketch @ Simmmple</title>
       </Helmet>
       <NavbarBF />
-      <Flex direction='column' bg='#14182C' overflowX='hidden'>
+      <Flex direction='column' bg='#02021E' overflowX='hidden'>
         <Flex
           px={{ base: "20px", xl: "0px" }}
           py={{ base: "140px", md: "0px" }}

@@ -138,7 +138,7 @@ const Product = (props) => {
         <title itemprop="name">{title}</title>
       </Helmet>
       <Flex
-        bg='#14182C'
+        bg='#02021E'
         pb='225px'
         pt={{ sm: "45px", lg: "90px" }}
         direction='column'>
